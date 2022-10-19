@@ -12,7 +12,7 @@
 </a>
 </div>
 <br>
-DocApp sarà un'app mobile che dia la possibilità di acquisire documenti attinenti ad esami relativi ai corsi di studio scelti.
+DocApp sarà un'app mobile che darà la possibilità di acquisire documenti attinenti ad esami relativi ai corsi di studio scelti.
 Essa fornirà uno strumento di supporto per lo studio degli studenti lavoratore ma anche dare la possibilità agli studenti di condividere appunti personali e/o
 adeguamenti di slide rispetto a quelle fornite dai professori universitari.
 
