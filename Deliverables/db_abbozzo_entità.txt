@@ -1,0 +1,26 @@
+utente-non loggato
+studente
+Creator 
+admin
+
+
+downloaddati 	documento studente
+salvato  		documento studente
+feedback 		documento studente
+documento
+
+
+messaggio
+conversazione
+gruppo
+contatti
+
+
+post
+conversazione
+gruppo
+contatti
+commento
+
+
+
