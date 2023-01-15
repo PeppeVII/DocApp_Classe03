@@ -1,5 +1,6 @@
-drop database docapp;
+drop database if exists docapp;
 create database docapp;
+use docapp;
 
 create table Studente(
 email varchar(40) primary key not null,
@@ -78,3 +79,6 @@ primary key (documento, studente),
 foreign key (documento) references Documento(id),
 foreign key (studente) references Studente(email)
 );
+
+INSERT INTO roles(name) VALUES('ROLE_USER');
+INSERT INTO roles(name) VALUES('ROLE_ADMIN');
