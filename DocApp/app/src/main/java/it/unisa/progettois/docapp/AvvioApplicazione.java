@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class AvvioApplicazione extends AppCompatActivity {
     Button registration, login;
 
     @Override
@@ -21,13 +21,17 @@ public class MainActivity extends AppCompatActivity {
         registration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                registration();
+                Intent intent = new Intent(getApplicationContext(), RegistrazioneActivity.class);
+                startActivity(intent);
             }
         });
-    }
 
-    public void registration(){
-        Intent intent = new Intent(this, RegistrazioneActivity.class);
-        startActivity(intent);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
