@@ -21,6 +21,8 @@ public class Fragment_Filtro extends Fragment {
         return view;
     }
 
+
+    //TUTTO QUESTO PER LA COMMIT DEL CAZZO (GIUSEPPE D'AMBROSIO)
     /*
 imgFavorite.setClickable(true);
 imgFavorite.setOnClickListener(new OnClickListener() {
