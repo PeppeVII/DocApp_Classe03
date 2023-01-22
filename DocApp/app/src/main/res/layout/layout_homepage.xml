@@ -1,18 +1,311 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#2271b3"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="it.unisa.progettois.docapp.Fragment_Filtro">
+
+    <LinearLayout
+        android:id="@+id/llfiltro"
+        android:layout_width="match_parent"
+        android:layout_height= "wrap_content"
+        android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/bottoneFiltro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#2271b3"
+            android:onClick="ricercaDocumenti"
+            android:text="🔍 Cerca documenti"
+            android:textColor="@color/black"></Button>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/llfiltro"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white"
         android:orientation="vertical">
 
         <FrameLayout
-            android:id="@+id/filtroDocumenti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="DOCUMENTI PERTINENTI"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-        </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/documento1"
+                    android:layout_width="100dp"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#2271b3"></LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/documento2"
+                    android:layout_width="100dp"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#2271b3"></LinearLayout>
+
+                <ImageView
+                    android:id="@+id/documento3"
+                    android:layout_width="100dp"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#2271b3"></LinearLayout>
+
+                <ImageView
+                    android:id="@+id/documento4"
+                    android:layout_width="100dp"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#2271b3"></LinearLayout>
+
+                <ImageView
+                    android:id="@+id/documento5"
+                    android:layout_width="100dp"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:text="FACOLTA'"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="qui troverai tutte le facoltà che sono disponibili" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#2271b3"></LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#2271b3"></LinearLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#2271b3"></LinearLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#2271b3"></LinearLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:text="UNIVERSITA'"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="qui troverai tutte le univesità che sono disponibili" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsvuniversita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#2271b3"></LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#2271b3"></LinearLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#2271b3"></LinearLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#2271b3"></LinearLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo"
+                    android:text="Immagine 1" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/hsvuniversita"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:background="#2271b3"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="77dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/carica" />
+
+            <ImageView
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/logo" />
+
+            <ImageView
+                android:layout_width="77dp"
+                android:layout_height="wrap_content"
+
+                android:src="@mipmap/profilo" />
+
+            <ImageView
+                android:layout_width="91dp"
+                android:layout_height="wrap_content"
+
+                android:src="@mipmap/chat" />
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 </RelativeLayout>

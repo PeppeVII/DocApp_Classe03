@@ -11,10 +11,9 @@
 
         <ImageView
             android:id="@+id/immagineApplicazione"
-            android:src="@mipmap/lino"
-            android:layout_width="200dp"
-            android:layout_height="200dp">
-        </ImageView>
+            android:layout_width="203dp"
+            android:layout_height="116dp"
+            android:src="@mipmap/logo"></ImageView>
 
         <Button
             android:id="@+id/bottonePerRegistrazione"
