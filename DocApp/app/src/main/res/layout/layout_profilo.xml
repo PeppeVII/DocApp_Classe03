@@ -53,6 +53,7 @@
                 android:textSize="20dp" />
 
             <ImageView
+                android:id="@+id/caricaFotoProfilo"
                 android:layout_width="60dp"
                 android:layout_height="47dp"
                 android:layout_marginStart="2dp"
@@ -86,6 +87,7 @@
                 android:singleLine="true" />
 
             <Button
+                android:id="@+id/bottone_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -118,6 +120,7 @@
                 android:singleLine="true" />
 
             <Button
+                android:id="@+id/bottone_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -150,6 +153,7 @@
                 android:singleLine="true" />
 
             <Button
+                android:id="@+id/bottone_universita"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -279,11 +283,15 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/iconaHome"
+                android:clickable="true"
                 android:layout_width="77dp"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/home" />
 
             <ImageView
+                android:id="@+id/iconaCarica"
+                android:clickable="true"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/carica" />
@@ -294,12 +302,16 @@
                 android:src="@mipmap/logo" />
 
             <ImageView
+                android:id="@+id/iconaProfilo"
+                android:clickable="true"
                 android:layout_width="77dp"
                 android:layout_height="wrap_content"
 
                 android:src="@mipmap/profilo" />
 
             <ImageView
+                android:id="@+id/iconaChat"
+                android:clickable="true"
                 android:layout_width="91dp"
                 android:layout_height="wrap_content"
 

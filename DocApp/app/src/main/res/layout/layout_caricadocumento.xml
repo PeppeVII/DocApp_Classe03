@@ -50,7 +50,8 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dai un nome al documento"
+            android:hint="Dai un nome al documento"
+            android:singleLine="true"
             android:textColor="@color/black"
             android:textSize="15dp" />
 
@@ -65,7 +66,8 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Inserisci Università a cui appartiene questo documento"
+            android:hint="Inserisci Università a cui appartiene questo documento"
+            android:singleLine="true"
             android:textColor="@color/black"
             android:textSize="15dp" />
 
@@ -80,7 +82,8 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Inserisci Facoltà a cui appartiene questo documento"
+            android:hint="Inserisci Facoltà a cui appartiene questo documento"
+            android:singleLine="true"
             android:textColor="@color/black"
             android:textSize="15dp" />
 
@@ -95,7 +98,8 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Inserisci la materia a cui appartiene il documento"
+            android:hint="Inserisci la materia a cui appartiene il documento"
+            android:singleLine="true"
             android:textColor="@color/black"
             android:textSize="15dp" />
 

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="#2271b3"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="it.unisa.progettois.docapp.Fragment_Filtro">
+    tools:context="it.unisa.progettois.docapp.HomepageActivity">
 
     <LinearLayout
         android:id="@+id/llfiltro"
@@ -21,7 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="#2271b3"
-            android:onClick="ricercaDocumenti"
             android:text="🔍 Cerca documenti"
             android:textColor="@color/black"></Button>
 
@@ -279,9 +278,12 @@
             <ImageView
                 android:layout_width="77dp"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/home" />
+                android:src="@mipmap/home"
+                android:clickable="true"/>
 
             <ImageView
+                android:id="@+id/iconaCarica"
+                android:clickable="true"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/carica" />
@@ -292,6 +294,7 @@
                 android:src="@mipmap/logo" />
 
             <ImageView
+                android:id="@+id/iconaProfilo"
                 android:layout_width="77dp"
                 android:layout_height="wrap_content"
 

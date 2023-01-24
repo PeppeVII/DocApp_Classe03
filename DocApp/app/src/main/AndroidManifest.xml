@@ -27,6 +27,9 @@
         </activity>
         <activity android:name=".RegistrazioneActivity"></activity>
         <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".CaricaDocumentoActivity"></activity>
+        <activity android:name=".HomepageActivity"></activity>
+        <activity android:name=".ProfiloActivity"></activity>
     </application>
 
 </manifest>
