@@ -1,25 +1,19 @@
 <resources>
     <string name="app_name">DocApp</string>
-    <string-array name="spinner_items">
-        <item>Tonino</item>
-        <item>Peppe</item>
-        <item>Cazzo</item>
-        <item>Fessa</item>
-        <item>Aiuto</item>
-        <item>Culo</item>
-        <item>Vagina</item>
-        <item>Vulva</item>
-        <item>Patata</item>
-        <item>Pesce</item>
-        <item>Farfalla</item>
-        <item>Pisello</item>
-        <item>Membro</item>
-        <item>Combra</item>
-        <item>Ciolla</item>
-        <item>Ciddone</item>
-        <item>Nerchia</item>
-        <item>Valeria</item>
-        <item>Lambiashe</item>
-        <item>ChadRavino</item>
+    <string-array name="spinner_universita">
+        <item>Università degli Studi del Sannio</item>
+        <item>Università degli Studi di Napoli Federico II</item>
+        <item>Università degli Studi di Napoli-Parthenope</item>
+        <item>Università degli Studi L\'Orientale di Napoli</item>
+        <item>Università degli Studi di Salerno</item>
+        <item>Università degli Studi della Campania \"Luigi Vanvitelli\"</item>
+    </string-array>
+
+    <string-array name="spinner_facolta">
+        <item>Informatica</item>
+        <item>Ingegneria Informatica</item>
+        <item>Matematica</item>
+        <item>Fisica</item>
+        <item>Biologia</item>
     </string-array>
 </resources>

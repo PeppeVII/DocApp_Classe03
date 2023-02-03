@@ -82,19 +82,9 @@
 
         <Spinner
             android:dropDownWidth="wrap_content"
-            android:id="@+id/spinner"
-            android:isScrollContainer="true"
+            android:id="@+id/spinnerUniversita"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/nomeUniversita"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Inserisci Università a cui appartiene questo documento"
-            android:singleLine="true"
-            android:textColor="@color/black"
-            android:textSize="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -104,14 +94,11 @@
             android:textColor="@color/black"
             android:textSize="20dp" />
 
-        <EditText
-            android:id="@+id/nomeFacolta"
+        <Spinner
+            android:dropDownWidth="wrap_content"
+            android:id="@+id/spinnerFacolta"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Inserisci Facoltà a cui appartiene questo documento"
-            android:singleLine="true"
-            android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:layout_width="wrap_content"
