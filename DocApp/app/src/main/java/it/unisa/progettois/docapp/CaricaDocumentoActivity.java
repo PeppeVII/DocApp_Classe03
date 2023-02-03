@@ -27,27 +27,18 @@ public class CaricaDocumentoActivity extends AppCompatActivity {
             }
         });
 
-        iconaCarica.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CaricaDocumentoActivity.class);
-                startActivity(intent);
-            }
+        iconaCarica.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), CaricaDocumentoActivity.class);
+            startActivity(intent);
         });
 
-        iconaChat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        iconaChat.setOnClickListener(v -> {
 
-            }
         });
 
-        iconaProfilo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ProfiloActivity.class);
-                startActivity(intent);
-            }
+        iconaProfilo.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), ProfiloActivity.class);
+            startActivity(intent);
         });
     }
 }
