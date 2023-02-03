@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">DocApp</string>
     <string-array name="spinner_universita">
+        <item>-</item>
         <item>Università degli Studi del Sannio</item>
         <item>Università degli Studi di Napoli Federico II</item>
         <item>Università degli Studi di Napoli-Parthenope</item>
@@ -10,10 +11,156 @@
     </string-array>
 
     <string-array name="spinner_facolta">
+        <item>-</item>
         <item>Informatica</item>
         <item>Ingegneria Informatica</item>
         <item>Matematica</item>
         <item>Fisica</item>
         <item>Biologia</item>
+    </string-array>
+
+    <string-array name="spinner_informatica">
+        <item>-</item>
+        <item>Algoritmi e Strutture Dati</item>
+        <item>Analisi Matematica</item>
+        <item>Architettura degli Elaboratori</item>
+        <item>Basi di Dati</item>
+        <item>Calcolo delle Probabilità e Statistica Matematica</item>
+        <item>Calcolo Scientifico</item>
+        <item>Elementi di Teoria della Computazione</item>
+        <item>Fisica</item>
+        <item>Fondamenti di Intelligenza Artificiale</item>
+        <item>Grafica e Interattività</item>
+        <item>Ingegneria del Software</item>
+        <item>Interazione Uomo Macchina</item>
+        <item>Lingua Inglese</item>
+        <item>Matematica Discreta</item>
+        <item>Metodi Matematici per Informatica</item>
+        <item>Mobile Programming</item>
+        <item>Musimathics</item>
+        <item>Progettazione di Algoritmi</item>
+        <item>Programmazione e Strutture Dati</item>
+        <item>Programmazione Avanzata</item>
+        <item>Programmazione Distribuita</item>
+        <item>Programmazione I</item>
+        <item>Programmazione Object Oriented</item>
+        <item>Reti dei Calcolatori</item>
+        <item>Ricerca Operativa</item>
+        <item>Sicurezza</item>
+        <item>Sistemi Operativi</item>
+        <item>Tecnologie Software per il Web</item>
+    </string-array>
+
+    <string-array name="spinner_ingegneriaInformatica">
+        <item>-</item>
+        <item>Algoritmi e Strutture Dati</item>
+        <item>Analisi dei Segnali</item>
+        <item>Analisi Matematica I</item>
+        <item>Analisi Matematica II</item>
+        <item>Antenne e Collegamenti Wireless</item>
+        <item>Basi di Dati</item>
+        <item>Cacolatori Elettronici</item>
+        <item>Controlli Automatici</item>
+        <item>Economia della Conoscenza e Organizzazione del Territorio</item>
+        <item>Elettronica Digitale</item>
+        <item>Elettrotecnica</item>
+        <item>Fisica I</item>
+        <item>Fisica II</item>
+        <item>Fisica di Base</item>
+        <item>Fondamenti di Programmazione</item>
+        <item>Geometria Algebra e Logica</item>
+        <item>Inglese</item>
+        <item>Internet of Things</item>
+        <item>Logica</item>
+        <item>Matematica di Base</item>
+        <item>Programmazione ad Oggetti</item>
+        <item>Reti di Calcolatori</item>
+        <item>Sistemi di Telecomunicazione</item>
+        <item>Sistemi Informativi</item>
+        <item>Sistemi Operativi</item>
+        <item>Statistica Applicata</item>
+    </string-array>
+
+    <string-array name="spinner_matematica">
+        <item>-</item>
+        <item>Algebra Commutativa</item>
+        <item>Algebra I e II</item>
+        <item>Algebra III</item>
+        <item>Analisi Matematica I e II</item>
+        <item>Analisi Matematica III</item>
+        <item>Analisi Matematica IV</item>
+        <item>Calcolo Numerico I</item>
+        <item>Calcolo Numerico II</item>
+        <item>Chimica</item>
+        <item>Equazioni Differenziali</item>
+        <item>Fisica I</item>
+        <item>Fisica II</item>
+        <item>Fondamenti della Matematica</item>
+        <item>Fondamenti di Informatica</item>
+        <item>Geometria I</item>
+        <item>Geometria II</item>
+        <item>Geometria III</item>
+        <item>Geometria IV</item>
+        <item>Inglese</item>
+        <item>Logica Matematica</item>
+        <item>Matematiche Complementari</item>
+        <item>Matematiche Complementari II</item>
+        <item>Meccanica Razionale</item>
+        <item>Metodi per il Trattamento Informazione</item>
+        <item>Omologia e Coomologia</item>
+        <item>Probabilita</item>
+        <item>Ricerca Operativa</item>
+        <item>Teoria dei Grafi</item>
+        <item>Teoria delle Funzioni</item>
+        <item>Teoria di Galois</item>
+        <item>Topologia</item>
+    </string-array>
+
+    <string-array name="spinner_fisica">
+        <item>-</item>
+        <item>Analisi I</item>
+        <item>Analisi II</item>
+        <item>Astronomia Generale</item>
+        <item>Chimica</item>
+        <item>Elementi di Fisica Biomedica</item>
+        <item>Fisica Computazionale</item>
+        <item>Fisica Generale I</item>
+        <item>Fisica Generale II</item>
+        <item>Fisica per Beni Culturali</item>
+        <item>Geometria</item>
+        <item>Inglese</item>
+        <item>Introduzione della Fisica dello Stato Solido</item>
+        <item>Introduzione della Fisica Terrestre</item>
+        <item>Istituzioni di Fisica della Materia</item>
+        <item>Istituzioni di Fisica Nucleare e Subnucleare</item>
+        <item>Istituzioni di Fisica Teorica</item>
+        <item>Istituzioni di Metodi Matematici per la Fisica</item>
+        <item>Meccanica Analitica e Meccanica Statica</item>
+        <item>Metodi Sperimentali per la Fisica Nucleare e Subnucleare</item>S
+    </string-array>
+
+    <string-array name="spinner_biologia">
+        <item>-</item>
+        <item>Analisi Organica Strumentale</item>
+        <item>Chimica Ambientale</item>
+        <item>Chimica Analitica degli Alimenti</item>
+        <item>Chimica Analitica Strumentale</item>
+        <item>Chimica e Catalisi Industriale</item>
+        <item>Chimica Fisica I</item>
+        <item>Chimica Fisica II</item>
+        <item>Chimica Forense</item>
+        <item>Chimica Generale e Inorganica</item>
+        <item>Chimica Inorganica I</item>
+        <item>Chimica Inorganica II</item>
+        <item>Complementi di Chimica Fisica</item>
+        <item>Complementi di Chimica Organica</item>
+        <item>Fisica I</item>
+        <item>Fisica II</item>
+        <item>Fondamenti di Chimica Analitica</item>
+        <item>Istituzioni di Matematiche</item>
+        <item>Inglese</item>
+        <item>Metodi Matematici per la Chimica</item>
+        <item>Principi di Chimica Biologica</item>
+        <item>Principi di Chimica Macromolecolare</item>
     </string-array>
 </resources>
