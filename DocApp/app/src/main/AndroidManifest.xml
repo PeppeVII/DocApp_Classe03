@@ -25,11 +25,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".RegistrazioneActivity"></activity>
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".CaricaDocumentoActivity"></activity>
-        <activity android:name=".HomepageActivity"></activity>
-        <activity android:name=".ProfiloActivity"></activity>
+        <activity android:name=".RegistrazioneActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".CaricaDocumentoActivity"/>
+        <activity android:name=".HomepageActivity"/>
+        <activity android:name=".ProfiloActivity"/>
     </application>
 
 </manifest>

@@ -11,8 +11,8 @@ public class ProfiloActivity extends AppCompatActivity {
     ImageView iconaHome, iconaCarica, iconaChat;
 
     @Override
-    protected void onCreate(Bundle savedIstanceState) {
-        super.onCreate(savedIstanceState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_profilo);
 
         iconaHome = findViewById(R.id.iconaHome);

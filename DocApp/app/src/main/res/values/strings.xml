@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">DocApp</string>
+    <string-array name="spinner_items">
+        <item>Tonino</item>
+        <item>Peppe</item>
+        <item>Cazzo</item>
+        <item>Fessa</item>
+        <item>Aiuto</item>
+        <item>Culo</item>
+        <item>Vagina</item>
+        <item>Vulva</item>
+        <item>Patata</item>
+        <item>Pesce</item>
+        <item>Farfalla</item>
+        <item>Pisello</item>
+        <item>Membro</item>
+        <item>Combra</item>
+        <item>Ciolla</item>
+        <item>Ciddone</item>
+        <item>Nerchia</item>
+        <item>Valeria</item>
+        <item>Lambiashe</item>
+        <item>ChadRavino</item>
+    </string-array>
 </resources>
