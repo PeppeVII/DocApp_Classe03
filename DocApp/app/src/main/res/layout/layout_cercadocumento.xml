@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#2271b3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/intestazione"
+        android:layout_width="match_parent"
+        android:layout_height= "wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:backgroundTint="#2271b3"
+            android:text="Cerca Documento"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/centropage"
+        android:layout_width="match_parent"
+        android:layout_height="621dp"
+        android:layout_below="@+id/intestazione"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerca quello che ti serve!\nChe aspetti,\nCerca il documento e inizia a studiare!"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:text="Università"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <Spinner
+            android:dropDownWidth="wrap_content"
+            android:id="@+id/spinnerUniversita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:text="Facoltà"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <Spinner
+            android:dropDownWidth="wrap_content"
+            android:id="@+id/spinnerFacolta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:text="Insegnamento"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <Spinner
+            android:dropDownWidth="wrap_content"
+            android:id="@+id/spinnerInsegnamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/buttonCerca"
+                android:onClick="ricerca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2271b3"
+                android:text="CERCA"
+                android:textSize="40dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/centropage"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iconaHome"
+            android:clickable="true"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/home" />
+
+        <ImageView
+            android:id="@+id/iconaCerca"
+            android:clickable="true"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/carica" />
+
+        <ImageView
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo" />
+
+        <ImageView
+            android:id="@+id/iconaProfilo"
+            android:layout_width="77dp"
+            android:clickable="true"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/profilo" />
+
+        <ImageView
+            android:id="@+id/iconaChat"
+            android:clickable="true"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/chat" />
+
+    </LinearLayout>
+
+</RelativeLayout>

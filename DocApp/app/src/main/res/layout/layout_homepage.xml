@@ -18,6 +18,7 @@
 
         <Button
             android:id="@+id/bottoneFiltro"
+            android:onClick="cercaDocumenti"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="#2271b3"
@@ -301,11 +302,11 @@
                 android:src="@mipmap/profilo" />
 
             <ImageView
+                android:id="@+id/iconaChat"
+                android:clickable="true"
                 android:layout_width="91dp"
                 android:layout_height="wrap_content"
-
                 android:src="@mipmap/chat" />
-
 
         </LinearLayout>
 

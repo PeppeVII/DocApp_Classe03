@@ -12,6 +12,7 @@ public class HomepageActivity extends AppCompatActivity
 {
     Button bottoneFiltro;
     ImageView carica, profilo, chat;
+
     @Override
     protected void onCreate(Bundle savedIstanceState) {
         super.onCreate(savedIstanceState);
@@ -20,6 +21,7 @@ public class HomepageActivity extends AppCompatActivity
         bottoneFiltro = findViewById(R.id.bottoneFiltro);
         carica = findViewById(R.id.iconaCarica);
         profilo = findViewById(R.id.iconaProfilo);
+        chat = findViewById(R.id.iconaChat);
 
         profilo.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), ProfiloActivity.class);
@@ -30,5 +32,10 @@ public class HomepageActivity extends AppCompatActivity
             Intent intent = new Intent(getApplicationContext(), CaricaDocumentoActivity.class);
             startActivity(intent);
         });
+    }
+
+    public void cercaDocumenti(View view){
+        Intent intent = new Intent(getApplicationContext(), RicercaDocumentoActivity.class);
+        startActivity(intent);
     }
 }

@@ -1,4 +1,4 @@
-package it.unisa.progettois.docapp.dataTier;
+package it.unisa.progettois.docapp.data;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

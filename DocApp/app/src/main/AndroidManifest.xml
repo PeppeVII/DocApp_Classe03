@@ -30,6 +30,7 @@
         <activity android:name=".CaricaDocumentoActivity"/>
         <activity android:name=".HomepageActivity"/>
         <activity android:name=".ProfiloActivity"/>
+        <activity android:name=".RicercaDocumentoActivity"/>
     </application>
 
 </manifest>
