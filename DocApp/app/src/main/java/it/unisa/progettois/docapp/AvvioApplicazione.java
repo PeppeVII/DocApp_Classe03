@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import java.sql.SQLException;
 
-import it.unisa.progettois.docapp.dataTier.ConnectorDB;
 
 public class AvvioApplicazione extends AppCompatActivity {
     Button registration, login;
-    ConnectorDB connector;
+
+    public AvvioApplicazione() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +21,7 @@ public class AvvioApplicazione extends AppCompatActivity {
         setContentView(R.layout.layout_apertura);
 
 
-        connector = new ConnectorDB();
+
         login = (Button) findViewById(R.id.bottonePerLogin);
         registration = (Button) findViewById(R.id.bottonePerRegistrazione);
 

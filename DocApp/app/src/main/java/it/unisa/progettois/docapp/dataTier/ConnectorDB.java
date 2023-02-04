@@ -5,17 +5,20 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectorDB {
-    private String url = "jdbc:mysql://IP:185.177.116.54/docapp";
-    private String user = "docappadmin";
-    private String password = "K5@jnNk!DJo$tC1F";
+    private static final String DB_URL = "jdbc:mysql://IP:185.177.116.54/docapp";
+    private static final String USER = "docappadmin";
+    private static final String PASS = "K5@jnNk!DJo$tC1F";
 
-    public ConnectorDB(){
+    public ConnectorDB(){}
+
+    public static Connection getConnection() throws SQLException{
+        Connection conn = null;
         try {
-            Connection conn = DriverManager.getConnection(url, user, password);
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
             System.out.println("Connessione avvenuta con successo");
-
-        }catch(SQLException exception){
-            System.out.println("Collegamento al db fallito");
+        }catch (SQLException e){
+            e.printStackTrace();
         }
+        return conn;
     }
 }
