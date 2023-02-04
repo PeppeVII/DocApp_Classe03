@@ -7,14 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import it.unisa.progettois.docapp.dataTier.ConnectorDB;
+
 public class AvvioApplicazione extends AppCompatActivity {
     Button registration, login;
+    ConnectorDB connector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_apertura);
 
+
+        connector = new ConnectorDB();
         login = (Button) findViewById(R.id.bottonePerLogin);
         registration = (Button) findViewById(R.id.bottonePerRegistrazione);
 
