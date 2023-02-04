@@ -32,6 +32,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/llfiltro"
         android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
         android:background="@android:color/white"
         android:orientation="vertical">
 
@@ -49,7 +50,7 @@
             android:textSize="20dp" />
 
         <HorizontalScrollView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -102,9 +103,9 @@
                     android:text="Immagine 1" />
 
                 <LinearLayout
-                    android:layout_width="3dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#2271b3"></LinearLayout>
+                    android:background="#2271b3"/>
 
                 <ImageView
                     android:id="@+id/documento5"
@@ -279,14 +280,14 @@
             <ImageView
                 android:layout_width="77dp"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/home"
-                android:clickable="true"/>
+                android:clickable="true"
+                android:src="@mipmap/home" />
 
             <ImageView
                 android:id="@+id/iconaCarica"
-                android:clickable="true"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:clickable="true"
                 android:src="@mipmap/carica" />
 
             <ImageView
@@ -303,9 +304,9 @@
 
             <ImageView
                 android:id="@+id/iconaChat"
-                android:clickable="true"
                 android:layout_width="91dp"
                 android:layout_height="wrap_content"
+                android:clickable="true"
                 android:src="@mipmap/chat" />
 
         </LinearLayout>
