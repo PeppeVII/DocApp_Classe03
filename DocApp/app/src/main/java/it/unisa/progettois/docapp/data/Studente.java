@@ -1,6 +1,8 @@
 package it.unisa.progettois.docapp.data;
 
-public class Studente{
+import java.io.Serializable;
+
+public class Studente implements Serializable {
     private String email, nickname, password;
     private boolean is_admin;
 

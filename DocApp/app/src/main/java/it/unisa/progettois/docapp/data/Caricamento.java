@@ -1,29 +1,29 @@
 package it.unisa.progettois.docapp.data;
 
 public class Caricamento {
-    private Documento d;
-    private Studente s;
+    private int id;
+    private String email;
 
     public Caricamento(){}
 
-    public Caricamento(Documento d, Studente s){
-        this.d = d;
-        this.s = s;
+    public Caricamento(int id, String email){
+        this.id = id;
+        this.email = email;
     }
 
-    public Studente getS() {
-        return s;
+    public String getEmail() {
+        return email;
     }
 
-    public void setS(Studente s) {
-        this.s = s;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public Documento getD() {
-        return d;
+    public int getId() {
+        return id;
     }
 
-    public void setD(Documento d) {
-        this.d = d;
+    public void setId(int id) {
+        this.id = id;
     }
 }

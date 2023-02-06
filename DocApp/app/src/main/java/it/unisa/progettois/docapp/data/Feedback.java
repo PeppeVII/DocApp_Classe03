@@ -1,29 +1,31 @@
 package it.unisa.progettois.docapp.data;
 
-public class Feedback {
-    private Documento d;
-    private Studente s;
+import java.io.Serializable;
+
+public class Feedback implements Serializable {
+    private int id;
+    private String email;
 
     public Feedback(){}
 
-    public Feedback(Documento d, Studente s){
-        this.d = d;
-        this.s = s;
+    public Feedback(int id, String email){
+        this.id = id;
+        this.email = email;
     }
 
-    public Studente getS() {
-        return s;
+    public String getEmail() {
+        return email;
     }
 
-    public void setS(Studente s) {
-        this.s = s;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public Documento getD() {
-        return d;
+    public int getId() {
+        return id;
     }
 
-    public void setD(Documento d) {
-        this.d = d;
+    public void setId(int id) {
+        this.id = id;
     }
 }

@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:text="Cerca quello che ti serve!\nChe aspetti,\nCerca il documento e inizia a studiare!"
             android:textColor="@color/black"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -54,10 +54,10 @@
             android:textSize="20dp" />
 
         <Spinner
-            android:dropDownWidth="wrap_content"
             android:id="@+id/spinnerUniversita"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:dropDownWidth="wrap_content" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,10 +68,10 @@
             android:textSize="20dp" />
 
         <Spinner
-            android:dropDownWidth="wrap_content"
             android:id="@+id/spinnerFacolta"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:dropDownWidth="wrap_content" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -82,17 +82,16 @@
             android:textSize="20dp" />
 
         <Spinner
-            android:dropDownWidth="wrap_content"
             android:id="@+id/spinnerInsegnamento"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:dropDownWidth="wrap_content" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="20dp">
-        </LinearLayout>
+            android:paddingTop="20dp"></LinearLayout>
 
 
         <LinearLayout
@@ -102,10 +101,10 @@
 
             <Button
                 android:id="@+id/buttonCerca"
-                android:onClick="ricerca"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#2271b3"
+                android:onClick="ricerca"
                 android:text="CERCA"
                 android:textSize="40dp" />
         </LinearLayout>
@@ -124,33 +123,33 @@
             android:clickable="true"
             android:layout_width="77dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/home" />
+            android:src="@mipmap/home_is" />
 
         <ImageView
             android:id="@+id/iconaCerca"
             android:clickable="true"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/carica" />
+            android:src="@mipmap/add_is_1" />
 
         <ImageView
             android:layout_width="85dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/logo" />
+            android:src="@mipmap/logo_is_1" />
 
         <ImageView
             android:id="@+id/iconaProfilo"
             android:layout_width="77dp"
             android:clickable="true"
             android:layout_height="wrap_content"
-            android:src="@mipmap/profilo" />
+            android:src="@mipmap/user_is" />
 
         <ImageView
             android:id="@+id/iconaChat"
             android:clickable="true"
             android:layout_width="91dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/chat" />
+            android:src="@mipmap/chat_is" />
 
     </LinearLayout>
 

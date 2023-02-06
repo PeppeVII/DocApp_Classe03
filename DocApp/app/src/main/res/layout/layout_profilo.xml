@@ -59,7 +59,7 @@
                 android:layout_marginStart="2dp"
                 android:layout_toEndOf="@+id/nome_utente"
                 android:clickable="true"
-                android:src="@mipmap/carica_foto" />
+                android:src="@mipmap/user_is" />
 
         </RelativeLayout>
 
@@ -221,7 +221,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@mipmap/logo"
+                        android:src="@mipmap/logo_is_1"
                         android:text="Immagine 1" />
 
                     <LinearLayout
@@ -233,7 +233,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@mipmap/logo"
+                        android:src="@mipmap/logo_is_1"
                         android:text="Immagine 1" />
 
                     <LinearLayout
@@ -244,7 +244,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@mipmap/logo"
+                        android:src="@mipmap/logo_is_1"
                         android:text="Immagine 1" />
 
                     <LinearLayout
@@ -255,7 +255,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@mipmap/logo"
+                        android:src="@mipmap/logo_is_1"
                         android:text="Immagine 1" />
 
                     <LinearLayout
@@ -266,7 +266,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@mipmap/logo"
+                        android:src="@mipmap/logo_is_1"
                         android:text="Immagine 1" />
                 </LinearLayout>
             </HorizontalScrollView>
@@ -287,19 +287,19 @@
                 android:clickable="true"
                 android:layout_width="77dp"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/home" />
+                android:src="@mipmap/home_is" />
 
             <ImageView
                 android:id="@+id/iconaCarica"
                 android:clickable="true"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/carica" />
+                android:src="@mipmap/add_is_1" />
 
             <ImageView
                 android:layout_width="94dp"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/logo" />
+                android:src="@mipmap/logo_is_1" />
 
             <ImageView
                 android:id="@+id/iconaProfilo"
@@ -307,7 +307,7 @@
                 android:layout_width="77dp"
                 android:layout_height="wrap_content"
 
-                android:src="@mipmap/profilo" />
+                android:src="@mipmap/user_is" />
 
             <ImageView
                 android:id="@+id/iconaChat"
@@ -315,7 +315,7 @@
                 android:layout_width="91dp"
                 android:layout_height="wrap_content"
 
-                android:src="@mipmap/chat" />
+                android:src="@mipmap/chat_is" />
 
 
         </LinearLayout>

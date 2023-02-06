@@ -1,6 +1,8 @@
 package it.unisa.progettois.docapp.data;
 
-public class Documento {
+import java.io.Serializable;
+
+public class Documento implements Serializable {
     private String id_documento, nome, descrizione, universita, facolta, corso_di_studio;
     private int dimensione;
 
