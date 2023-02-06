@@ -10,12 +10,12 @@
         android:gravity="center">
 
         <ImageView
-            android:layout_width="355sp"
-            android:layout_height="100sp"
-            android:src="@mipmap/titolo_is"/>
+            android:layout_width="wrap_content"
+            android:layout_height="130sp"
+            android:src="@mipmap/titolo_is" />
 
         <Button
-            android:textSize="@dimen/textSize_medium"
+            android:textSize="@dimen/textSize_high"
             android:id="@+id/bottonePerRegistrazione"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         </Button>
 
         <Button
-            android:textSize="@dimen/textSize_medium"
+            android:textSize="@dimen/textSize_high"
             android:id="@+id/bottonePerLogin"
             android:onClick="login"
             android:layout_width="wrap_content"

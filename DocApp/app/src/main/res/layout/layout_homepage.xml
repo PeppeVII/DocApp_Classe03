@@ -9,12 +9,8 @@
     <LinearLayout
         android:id="@+id/llfiltro"
         android:layout_width="match_parent"
-        android:layout_height= "wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
         <Button
             android:id="@+id/bottoneFiltro"
@@ -23,7 +19,7 @@
             android:layout_height="match_parent"
             android:backgroundTint="#2271b3"
             android:text="🔍 Cerca documenti"
-            android:textColor="@color/black"></Button>
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 
@@ -36,10 +32,6 @@
         android:background="@android:color/white"
         android:orientation="vertical">
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,7 +39,7 @@
             android:layout_marginTop="10dp"
             android:text="DOCUMENTI PERTINENTI"
             android:textColor="@android:color/black"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -62,44 +54,44 @@
                     android:id="@+id/documento1"
                     android:layout_width="100dp"
                     android:layout_height="200dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
                 <LinearLayout
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="#2271b3"></LinearLayout>
+                    android:background="#2271b3"/>
 
 
                 <ImageView
                     android:id="@+id/documento2"
                     android:layout_width="100dp"
                     android:layout_height="200dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
                 <LinearLayout
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="#2271b3"></LinearLayout>
+                    android:background="#2271b3"/>
 
                 <ImageView
                     android:id="@+id/documento3"
                     android:layout_width="100dp"
                     android:layout_height="200dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
                 <LinearLayout
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="#2271b3"></LinearLayout>
+                    android:background="#2271b3"/>
 
                 <ImageView
                     android:id="@+id/documento4"
                     android:layout_width="100dp"
                     android:layout_height="200dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
                 <LinearLayout
@@ -111,7 +103,7 @@
                     android:id="@+id/documento5"
                     android:layout_width="100dp"
                     android:layout_height="200dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
             </LinearLayout>
@@ -141,52 +133,52 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
                 <LinearLayout
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="#2271b3"></LinearLayout>
+                    android:background="#2271b3"/>
 
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
                 <LinearLayout
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="#2271b3"></LinearLayout>
+                    android:background="#2271b3"/>
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
                 <LinearLayout
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="#2271b3"></LinearLayout>
+                    android:background="#2271b3"/>
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
                 <LinearLayout
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="#2271b3"></LinearLayout>
+                    android:background="#2271b3"/>
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
             </LinearLayout>
@@ -218,61 +210,60 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
                 <LinearLayout
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="#2271b3"></LinearLayout>
+                    android:background="#2271b3"/>
 
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
                 <LinearLayout
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="#2271b3"></LinearLayout>
+                    android:background="#2271b3"/>
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
                 <LinearLayout
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="#2271b3"></LinearLayout>
+                    android:background="#2271b3"/>
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
 
                 <LinearLayout
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="#2271b3"></LinearLayout>
+                    android:background="#2271b3"/>
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@mipmap/logo"
+                    android:src="@mipmap/logo_is_1"
                     android:text="Immagine 1" />
             </LinearLayout>
         </HorizontalScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/hsvuniversita"
-            android:layout_gravity="center"
+            android:layout_height="110dp"
+            android:layout_gravity="bottom"
             android:layout_marginTop="70dp"
             android:background="#2271b3"
             android:orientation="horizontal">
@@ -281,33 +272,33 @@
                 android:layout_width="77dp"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:src="@mipmap/home" />
+                android:src="@mipmap/home_is" />
 
             <ImageView
                 android:id="@+id/iconaCarica"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:src="@mipmap/carica" />
+                android:src="@mipmap/add_is_1" />
 
             <ImageView
                 android:layout_width="94dp"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/logo" />
+                android:src="@mipmap/logo_is_1" />
 
             <ImageView
                 android:id="@+id/iconaProfilo"
                 android:layout_width="77dp"
                 android:layout_height="wrap_content"
 
-                android:src="@mipmap/profilo" />
+                android:src="@mipmap/user_is" />
 
             <ImageView
                 android:id="@+id/iconaChat"
                 android:layout_width="91dp"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:src="@mipmap/chat" />
+                android:src="@mipmap/chat_is" />
 
         </LinearLayout>
 

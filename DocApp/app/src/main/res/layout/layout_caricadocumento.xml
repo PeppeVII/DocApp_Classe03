@@ -166,34 +166,34 @@
         android:id="@+id/iconaHome"
         android:clickable="true"
         android:layout_width="77dp"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/home" />
+        android:layout_height="wrap_content"/>
+        <!--android:src="@mipmap/home" -->/>
 
     <ImageView
         android:id="@+id/iconaCarica"
         android:clickable="true"
         android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/carica" />
+        android:layout_height="wrap_content" />
+        <!--android:src="@mipmap/carica" --> />
 
         <ImageView
             android:layout_width="85dp"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/logo" />
+            android:layout_height="wrap_content"/>
+            <!--android:src="@mipmap/logo" --> />
 
     <ImageView
         android:id="@+id/iconaProfilo"
         android:layout_width="77dp"
         android:clickable="true"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/profilo" />
+        android:layout_height="wrap_content"/>
+        <!--android:src="@mipmap/profilo"--> />
 
     <ImageView
         android:id="@+id/iconaChat"
         android:clickable="true"
         android:layout_width="91dp"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/chat" />
+        android:layout_height="wrap_content"/>
+        <!--android:src="@mipmap/chat" --> />
 
     </LinearLayout>
 
