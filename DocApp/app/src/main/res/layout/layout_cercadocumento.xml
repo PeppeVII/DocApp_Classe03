@@ -1,57 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="#2271b3"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:weightSum="7"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <!--LAYOUT INTESTAZIONE-->
     <LinearLayout
-        android:id="@+id/intestazione"
+        android:gravity="center"
+        android:background="#2271b3"
+        android:layout_weight="0.49"
         android:layout_width="match_parent"
-        android:layout_height= "wrap_content"
-        android:orientation="vertical">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
+        android:layout_height= "0dp"
+        android:orientation="horizontal">
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:backgroundTint="#2271b3"
-            android:text="Cerca Documento"
-            android:textSize="30dp"
-            android:textAlignment="center"
-            android:textColor="@color/white"/>
-
+            android:text="CERCA DOCUMENTO"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_medium" />
     </LinearLayout>
 
+
+    <!--LAYOUT TESTO-->
     <LinearLayout
-        android:id="@+id/centropage"
+        android:layout_marginStart="20dp"
+        android:layout_weight="1.48"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="621dp"
-        android:layout_below="@+id/intestazione"
-        android:layout_centerInParent="true"
-        android:background="@android:color/white"
-        android:orientation="vertical">
-
+        android:layout_height="0dp">
         <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
+            android:layout_weight="0.1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:ignore="NestedWeights,UselessLeaf" />
         <TextView
+            android:layout_weight="0.9"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
             android:text="Cerca quello che ti serve!\nChe aspetti,\nCerca il documento e inizia a studiare!"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="@dimen/textSize_medium" />
+    </LinearLayout>
+
+
+    <!--LAYOUT SPINNER UNIVERSITA'-->
+    <LinearLayout
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="15dp"
             android:text="Università"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="@dimen/textSize_medium" />
 
         <Spinner
             android:id="@+id/spinnerUniversita"
@@ -59,27 +70,46 @@
             android:layout_height="wrap_content"
             android:dropDownWidth="wrap_content" />
 
+    </LinearLayout>
+
+
+    <!--LAYOUT SPINNER FACOLTA'-->
+    <LinearLayout
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="15dp"
             android:text="Facoltà"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="@dimen/textSize_medium" />
 
         <Spinner
             android:id="@+id/spinnerFacolta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:dropDownWidth="wrap_content" />
+    </LinearLayout>
+
+
+    <!--LAYOUT SPINNER INSEGNAMENTO-->
+    <LinearLayout
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="15dp"
             android:text="Insegnamento"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="@dimen/textSize_medium" />
 
         <Spinner
             android:id="@+id/spinnerInsegnamento"
@@ -87,70 +117,77 @@
             android:layout_height="wrap_content"
             android:dropDownWidth="wrap_content" />
 
-        <LinearLayout
+    </LinearLayout>
+
+
+    <!--LAYOUT BOTTONE RICERCA-->
+    <LinearLayout
+        android:gravity="center"
+        android:layout_weight="1.40"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <Button
+            android:id="@+id/buttonCerca"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="20dp"/>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <Button
-                android:id="@+id/buttonCerca"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#2271b3"
-                android:onClick="ricerca"
-                android:text="CERCA"
-                android:textSize="40dp" />
-        </LinearLayout>
+            android:backgroundTint="#2271b3"
+            android:onClick="ricerca"
+            android:text="CERCA"
+            android:textSize="@dimen/textSize_high" />
 
     </LinearLayout>
 
+
+    <!--LAYOUT BASELINE-->
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/centropage"
-        android:layout_centerInParent="true"
+        android:layout_weight="0.63"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#2271b3"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/iconaHome"
-            android:clickable="true"
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/home_is" />
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/home_is"
+            tools:ignore="NestedWeights"/>
 
         <ImageView
-            android:id="@+id/iconaCerca"
-            android:clickable="true"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/add_is_1" />
+            android:id="@+id/iconaCarica"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/add_is_1"/>
 
         <ImageView
-            android:layout_width="85dp"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/logo_is_1" />
-
-        <ImageView
-            android:id="@+id/iconaProfilo"
-            android:layout_width="77dp"
-            android:clickable="true"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/user_is" />
+            android:id="@+id/iconaPost"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/post_is"/>
 
         <ImageView
             android:id="@+id/iconaChat"
-            android:clickable="true"
-            android:layout_width="91dp"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/chat_is" />
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/chat_is"/>
 
+        <ImageView
+            android:id="@+id/iconaProfilo"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/user_is"/>
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
