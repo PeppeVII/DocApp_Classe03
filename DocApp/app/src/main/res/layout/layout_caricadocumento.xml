@@ -1,51 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="#2271b3"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="9">
 
+
+    <!--LAYOUT INTESTAZIONE-->
     <LinearLayout
+        android:gravity="center"
+        android:background="#2271b3"
+        android:layout_weight="0.63"
         android:id="@+id/intestazione"
         android:layout_width="match_parent"
-        android:layout_height= "wrap_content"
-        android:orientation="vertical">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:backgroundTint="#2271b3"
-            android:text="CARICAMENTO DOCUMENTI"
-            android:textSize="30dp"
-            android:textAlignment="center"
-            android:textColor="@color/white"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/centropage"
-        android:layout_width="match_parent"
-        android:layout_height="621dp"
-        android:layout_below="@+id/intestazione"
-        android:layout_centerInParent="true"
-        android:background="@android:color/white"
-        android:orientation="vertical">
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        android:layout_height= "0dp"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="15dp"
-            android:text="Nome Documento"
+            android:layout_gravity="center"
+            android:backgroundTint="#2271b3"
+            android:text="CARICAMENTO DOCUMENTI"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_medium" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_weight="0.2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:ignore="UselessLeaf" />
+
+
+    <!--LAYOUT NOME DOCUMENTO-->
+    <LinearLayout
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="@dimen/textSize_small"/>
 
         <EditText
             android:id="@+id/nomeDocumento"
@@ -53,148 +56,203 @@
             android:layout_height="wrap_content"
             android:hint="Dai un nome al documento"
             android:singleLine="true"
-            android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+
+    <!--LAYOUT DESCRIZIONE DOCUMENTO-->
+    <LinearLayout
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="15dp"
             android:text="Descrizione"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="@dimen/textSize_small"/>
 
         <EditText
             android:id="@+id/descrizioneDocumento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Inserisci una descrizione del documento"
-            android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:hint="Inserisci una descrizione al documento"
+            android:singleLine="true"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+
+    <!--LAYOUT UNIVERSITA'-->
+    <LinearLayout
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="15dp"
             android:text="Università"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="@dimen/textSize_small"/>
 
         <Spinner
             android:dropDownWidth="wrap_content"
             android:id="@+id/spinnerUniversita"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <!--LAYOUT FACOLTA'-->
+    <LinearLayout
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="15dp"
             android:text="Facoltà"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="@dimen/textSize_small"/>
 
         <Spinner
             android:dropDownWidth="wrap_content"
             android:id="@+id/spinnerFacolta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <!--LAYOUT INSEGNAMENTO-->
+    <LinearLayout
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="15dp"
             android:text="Insegnamento"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="@dimen/textSize_small"/>
 
         <Spinner
             android:dropDownWidth="wrap_content"
             android:id="@+id/spinnerInsegnamento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+    </LinearLayout>
 
-        <LinearLayout
+
+    <!--LAYOUT INSERIMENTO DOCUMENTO-->
+    <LinearLayout
+        android:layout_weight="0.56"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="20dp">
+            android:text="Inserisci documento"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_small"
+            tools:ignore="NestedWeights" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Inserisci Documento"
-                android:textColor="@color/black"
-                android:textSize="30dp" />
+        <Button
+            android:layout_weight="0.4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#299fff"
+            android:text="Update" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:backgroundTint="#5F5F5F"
-                android:text="Update..."
-                android:textColor="@color/white" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <Button
-                android:id="@+id/buttonCarica"
-                android:onClick="caricamento"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#2271b3"
-                android:text="CARICA"
-                android:textSize="40dp" />
-        </LinearLayout>
+        <FrameLayout
+            android:layout_weight="0.4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:ignore="NestedWeights" />
 
     </LinearLayout>
 
+
+    <!--LAYOUT BOTTONE CARICA DOCUMENTO-->
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/centropage"
-        android:layout_centerInParent="true"
+        android:layout_weight="1.8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonCarica"
+            android:onClick="caricamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2271b3"
+            android:text="CARICA"
+            android:textSize="@dimen/textSize_medium" />
+    </LinearLayout>
+
+
+    <!--LAYOUT BASELINE-->
+    <LinearLayout
+        android:layout_weight="0.81"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#2271b3"
         android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/iconaHome"
-        android:clickable="true"
-        android:layout_width="77dp"
-        android:layout_height="wrap_content"/>
-        <!--android:src="@mipmap/home" -->/>
-
-    <ImageView
-        android:id="@+id/iconaCarica"
-        android:clickable="true"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content" />
-        <!--android:src="@mipmap/carica" --> />
+        <ImageView
+            android:id="@+id/iconaHome"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/home_is"
+            tools:ignore="NestedWeights" />
 
         <ImageView
-            android:layout_width="85dp"
-            android:layout_height="wrap_content"/>
-            <!--android:src="@mipmap/logo" --> />
+            android:id="@+id/iconaCarica"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/add_is_1"/>
 
-    <ImageView
-        android:id="@+id/iconaProfilo"
-        android:layout_width="77dp"
-        android:clickable="true"
-        android:layout_height="wrap_content"/>
-        <!--android:src="@mipmap/profilo"--> />
+        <ImageView
+            android:id="@+id/iconaPost"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/post_is"/>
 
-    <ImageView
-        android:id="@+id/iconaChat"
-        android:clickable="true"
-        android:layout_width="91dp"
-        android:layout_height="wrap_content"/>
-        <!--android:src="@mipmap/chat" --> />
+        <ImageView
+            android:id="@+id/iconaChat"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/chat_is"/>
 
+        <ImageView
+            android:id="@+id/iconaProfilo"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/user_is"/>
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
