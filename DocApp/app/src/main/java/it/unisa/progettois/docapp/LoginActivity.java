@@ -1,6 +1,9 @@
 package it.unisa.progettois.docapp;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -22,12 +25,16 @@ public class LoginActivity extends AppCompatActivity {
     Button buttonAccedi;
     EditText emailLogin, passwordLogin;
     private StudenteDAO studenteDAO;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_login);
 
+        sharedPreferences = getApplicationContext().getSharedPreferences("MY_SHARED_PREF", Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
         studenteDAO = new StudenteDAO(getApplicationContext());
         buttonAccedi = findViewById(R.id.buttonAccedi);
         emailLogin = findViewById(R.id.emailLogin);
@@ -39,9 +46,13 @@ public class LoginActivity extends AppCompatActivity {
         String password = passwordLogin.getText().toString();
         try {
             Studente studente = studenteDAO.effettuaLogin(email, password);
+
+            editor.putBoolean("is_logged", true);
+            editor.putString("email", email);
+            editor.putString("password", password);
+            editor.commit();
             Toast.makeText(this, "Studente di nome -> " + studente.getNickname() + " e admin uguale a -> " + studente.isIs_admin(), Toast.LENGTH_LONG).show();
             Intent intent = new Intent(getApplicationContext(), HomepageActivity.class);
-            intent.putExtra("studente", studente);
             startActivity(intent);
 
         }catch (Exception exception){

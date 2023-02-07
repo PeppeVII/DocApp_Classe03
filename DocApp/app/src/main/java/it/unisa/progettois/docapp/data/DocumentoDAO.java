@@ -11,7 +11,7 @@ import java.util.List;
 
 import it.unisa.progettois.docapp.facade.Facade;
 
-public class DocumentoDAO implements Facade {
+public class DocumentoDAO{
     private SQLiteDatabase db;
     private DatabasePopulator dp;
 
@@ -38,32 +38,26 @@ public class DocumentoDAO implements Facade {
 
         if(cursor.moveToFirst()){
             do {
-                documenti.add(new Documento(cursor.getString(cursor.getColumnIndex("nome")), cursor.getString(cursor.getColumnIndex("descrizione")), cursor.getString(cursor.getColumnIndex("universita")), cursor.getString(cursor.getColumnIndex("facolta")), cursor.getString(cursor.getColumnIndex("corso_di_studio")), cursor.getInt(cursor.getColumnIndex("dimensione"))));
+                documenti.add(new Documento(cursor.getString(cursor.getColumnIndex("nome")), cursor.getString(cursor.getColumnIndex("descrizione")), cursor.getString(cursor.getColumnIndex("universita")), cursor.getString(cursor.getColumnIndex("facolta")), cursor.getString(cursor.getColumnIndex("corso_di_studio")), cursor.getString(cursor.getColumnIndex("percorso")), cursor.getInt(cursor.getColumnIndex("dimensione"))));
             }while (cursor.moveToNext());
         }
         cursor.close();
         return documenti;
     }
 
-
-    @Override
-    public boolean inserisci(int id, String email) {
-        String[] selectionArgs = {String.valueOf(id), email};
-        db.execSQL("INSERT INTO Caricamento(documento, studente) VALUES (?,?)");
-        return true;
-    }
-
     @SuppressLint("Range")
-    @Override
-    public Object ottieni(int id, String email) {
-        Caricamento caricamento = new Caricamento();
-        String[] selectionArgs = {String.valueOf(id), email};
-        String query = "SELECT * FROM Caricamento c WHERE c.id = ? AND c.email = ?";
-        Cursor cursor = db.rawQuery(query, selectionArgs);
+    public Documento inserisciDocumento(String nome, String descrizione, String universita, String facolta, String corso_di_studio, String percorso, int dimensione){
+        Documento d;
+        String[] selectionArgs = {nome, descrizione, universita, facolta, corso_di_studio, percorso, String.valueOf(dimensione)};
+        String sql ="INSERT INTO Documento(nome, descrizione, universita, facolta, corso_di_studio, percorso, dimensione) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql1 = "select * from Documento d where d.nome = ? and d.descrizione = ? AND d.universita = ? AND d.facolta = ? AND d.corso_di_studio = ? AND d.percorso = ? AND d.dimensione = ?";
+        db.execSQL(sql, selectionArgs);
+        Cursor cursor1 = db.rawQuery(sql1, new String[]{nome, descrizione, universita, facolta, corso_di_studio, percorso, String.valueOf(dimensione)});
 
-        if(cursor.moveToFirst()) {
-            caricamento = new Caricamento(cursor.getInt(cursor.getColumnIndex("id")), cursor.getString(cursor.getColumnIndex("email")));
-            return caricamento;
+        if(cursor1.moveToFirst()) {
+            d = new Documento(cursor1.getString(cursor1.getColumnIndex("nome")), cursor1.getString(cursor1.getColumnIndex("descrizione")), cursor1.getString(cursor1.getColumnIndex("universita")), cursor1.getString(cursor1.getColumnIndex("facolta")), cursor1.getString(cursor1.getColumnIndex("corso_di_studio")), cursor1.getString(cursor1.getColumnIndex("percorso")), cursor1.getInt(cursor1.getColumnIndex("dimensione")));
+            d.setId_documento(cursor1.getInt(cursor1.getColumnIndex("id")));
+            return d;
         }
         return null;
     }

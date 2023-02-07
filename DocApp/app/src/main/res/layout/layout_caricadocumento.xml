@@ -175,6 +175,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#299fff"
+            android:onClick="updateDocumento"
             android:text="Update" />
 
         <FrameLayout
