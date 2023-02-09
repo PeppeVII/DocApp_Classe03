@@ -1,29 +1,29 @@
 package it.unisa.progettois.docapp.data;
 
 public class Interazione_Post {
-    private Documento d;
-    private Studente s;
+    private int id_documento;
+    private String email_studente;
 
     public Interazione_Post(){}
 
-    public Interazione_Post(Documento d, Studente s){
-        this.d = d;
-        this.s = s;
+    public Interazione_Post(int id_documento, String email_studente){
+        this.id_documento = id_documento;
+        this.email_studente = email_studente;
     }
 
-    public Studente getS() {
-        return s;
+    public int getId_documento() {
+        return id_documento;
     }
 
-    public void setS(Studente s) {
-        this.s = s;
+    public void setId_documento(int id_documento) {
+        this.id_documento = id_documento;
     }
 
-    public Documento getD() {
-        return d;
+    public String getEmail_studente() {
+        return email_studente;
     }
 
-    public void setD(Documento d) {
-        this.d = d;
+    public void setEmail_studente(String email_studente) {
+        this.email_studente = email_studente;
     }
 }

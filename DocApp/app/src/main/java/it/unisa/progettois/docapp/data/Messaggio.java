@@ -3,16 +3,15 @@ package it.unisa.progettois.docapp.data;
 import java.sql.Timestamp;
 
 public class Messaggio {
-    private Conversazione c;
-    private Studente s;
-    private String testo, id_messaggio;
+    private String  email_studente, testo, id_messaggio;
+    private int id_conversazione;
     private Timestamp tms;
 
     public Messaggio(){}
 
-    public Messaggio(Conversazione c, Studente s, String testo, Timestamp tms){
-        this.c = c;
-        this.s = s;
+    public Messaggio(int id_conversazione, String email_studente, String testo, Timestamp tms){
+        this.email_studente = email_studente;
+        this.id_conversazione = id_conversazione;
         this.testo = testo;
         this.tms = tms;
     }
@@ -41,19 +40,19 @@ public class Messaggio {
         this.testo = testo;
     }
 
-    public Studente getS() {
-        return s;
+    public int getId_conversazione() {
+        return id_conversazione;
     }
 
-    public void setS(Studente s) {
-        this.s = s;
+    public void setId_conversazione(int id_conversazione) {
+        this.id_conversazione = id_conversazione;
     }
 
-    public Conversazione getC() {
-        return c;
+    public String getEmail_studente() {
+        return email_studente;
     }
 
-    public void setC(Conversazione c) {
-        this.c = c;
+    public void setEmail_studente(String email_studente) {
+        this.email_studente = email_studente;
     }
 }

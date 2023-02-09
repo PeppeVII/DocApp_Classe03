@@ -22,11 +22,13 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
+import it.unisa.progettois.docapp.data.Caricamento;
 import it.unisa.progettois.docapp.data.CaricamentoDAO;
 import it.unisa.progettois.docapp.data.Documento;
 import it.unisa.progettois.docapp.data.DocumentoDAO;
 import it.unisa.progettois.docapp.data.Studente;
 import it.unisa.progettois.docapp.data.StudenteDAO;
+import it.unisa.progettois.docapp.facade.Facade;
 
 public class CaricaDocumentoActivity extends AppCompatActivity {
     ImageView iconaHome, iconaChat, iconaProfilo;
@@ -42,7 +44,7 @@ public class CaricaDocumentoActivity extends AppCompatActivity {
     Uri uri;
     private int weight_pdf;
     private static final int PICK_PDF_CODE = 1;
-    private CaricamentoDAO caricamentoDAO;
+    private Facade facade;
     private DocumentoDAO documentoDAO;
     private Studente studente;
 
@@ -62,7 +64,7 @@ public class CaricaDocumentoActivity extends AppCompatActivity {
         spinnerUniversita = findViewById(R.id.spinnerUniversita);
         spinnerFacolta = findViewById(R.id.spinnerFacolta);
         spinnerInsegnamento = findViewById(R.id.spinnerInsegnamento);
-        caricamentoDAO = new CaricamentoDAO(getApplicationContext());
+        facade = new CaricamentoDAO(getApplicationContext());
         documentoDAO = new DocumentoDAO(getApplicationContext());
         sharedPreferences = getSharedPreferences("MY_SHARED_PREF", 0);
         studenteDAO = new StudenteDAO(getApplicationContext());
@@ -198,10 +200,10 @@ public class CaricaDocumentoActivity extends AppCompatActivity {
                 Toast.makeText(this, "Non si dicono queste parole birbantello", Toast.LENGTH_LONG).show();
 
             Documento d = documentoDAO.inserisciDocumento(nomeD, descrizioneD, universita_scelta, facolta_scelta, insegnamento_scelto, pdf_path, weight_pdf);
-            Log.d("documento finale", "nome dello sfaccimma: " + d.getNome());
-            caricamentoDAO.inserisci(d.getId_documento(), studente.getEmail());
+            boolean tmp = facade.inserisci(d.getId_documento(), studente.getEmail());
+            Caricamento caricamento = (Caricamento) facade.ottieni(d.getId_documento(), studente.getEmail());
 
-            if(d != null || caricamentoDAO.inserisci(d.getId_documento(), studente.getEmail())) {
+            if(d != null || tmp) {
                 Toast.makeText(this, "Documento caricato con successo", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), HomepageActivity.class);
                 startActivity(intent);

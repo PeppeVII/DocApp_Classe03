@@ -72,6 +72,7 @@
 
         <ImageView
             android:id="@+id/iconaHome"
+            android:clickable="true"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -80,6 +81,7 @@
             tools:ignore="NestedWeights"/>
 
         <ImageView
+            android:clickable="true"
             android:id="@+id/iconaCarica"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -96,6 +98,7 @@
             android:src="@mipmap/post_is"/>
 
         <ImageView
+            android:clickable="true"
             android:id="@+id/iconaChat"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -105,6 +108,7 @@
 
         <ImageView
             android:id="@+id/iconaProfilo"
+            android:clickable="true"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"

@@ -1,29 +1,29 @@
 package it.unisa.progettois.docapp.data;
 
 public class Documenti_Visualizzati {
-    private Documento d;
-    private Studente s;
+    private int id_documento;
+    private String email_studente;
 
     public Documenti_Visualizzati(){}
 
-    public Documenti_Visualizzati(Documento d, Studente s){
-        this.d = d;
-        this.s = s;
+    public Documenti_Visualizzati(int id_documento, String email_studente){
+        this.id_documento = id_documento;
+        this.email_studente = email_studente;
     }
 
-    public Studente getS() {
-        return s;
+    public String getEmail_studente() {
+        return email_studente;
     }
 
-    public void setS(Studente s) {
-        this.s = s;
+    public void setEmail_studente(String email_studente) {
+        this.email_studente = email_studente;
     }
 
-    public Documento getD() {
-        return d;
+    public int getId_documento() {
+        return id_documento;
     }
 
-    public void setD(Documento d) {
-        this.d = d;
+    public void setId_documento(int id_documento) {
+        this.id_documento = id_documento;
     }
 }

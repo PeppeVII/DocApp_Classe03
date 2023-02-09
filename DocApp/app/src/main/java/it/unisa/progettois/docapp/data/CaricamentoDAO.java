@@ -36,11 +36,11 @@ public class CaricamentoDAO implements Facade {
     public Object ottieni(int id, String email) {
         Caricamento caricamento = new Caricamento();
         String[] selectionArgs = {String.valueOf(id), email};
-        String query = "SELECT * FROM Caricamento c WHERE c.id = ? AND c.email = ?";
+        String query = "SELECT * FROM Caricamento c WHERE c.documento = ? AND c.studente = ?";
         Cursor cursor = db.rawQuery(query, selectionArgs);
 
         if(cursor.moveToFirst()) {
-            caricamento = new Caricamento(cursor.getInt(cursor.getColumnIndex("id")), cursor.getString(cursor.getColumnIndex("email")));
+            caricamento = new Caricamento(cursor.getInt(cursor.getColumnIndex("documento")), cursor.getString(cursor.getColumnIndex("studente")));
             return caricamento;
         }
         return null;
