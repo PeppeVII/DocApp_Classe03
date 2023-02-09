@@ -51,7 +51,7 @@ public class CaricamentoDAO implements Facade {
     public String getAutore(int id){
         String[] selectionArgs = {String.valueOf(id)};
 
-        String query = "SELECT s.nickname FROM Studente s JOIN Caricamento c ON s.email = c.studente WHERE c.documento = ?";
+        String query = "SELECT s.nickname FROM Studente s JOIN Caricamento c ON s.email = c.studente";
         Cursor cursor = db.rawQuery(query, selectionArgs);
 
         if(cursor.moveToFirst()){

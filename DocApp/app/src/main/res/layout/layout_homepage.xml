@@ -84,6 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
+            <!--
             <LinearLayout
                 android:weightSum="15"
                 android:layout_width="0dp"
@@ -141,6 +142,15 @@
                     android:src="@mipmap/logo_is_1"/>
 
             </LinearLayout>
+
+            -->
+
+            <ListView
+                android:rotation="90"
+                android:scrollbarStyle="insideInset"
+                android:id="@+id/listaDocumentiPertinenti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </HorizontalScrollView>
 
     </LinearLayout>
