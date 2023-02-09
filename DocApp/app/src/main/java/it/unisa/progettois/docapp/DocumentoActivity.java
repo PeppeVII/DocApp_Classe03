@@ -1,29 +1,48 @@
 package it.unisa.progettois.docapp;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.io.File;
+import it.unisa.progettois.docapp.data.CaricamentoDAO;
+import it.unisa.progettois.docapp.data.Documento;
 
 public class DocumentoActivity extends AppCompatActivity {
     ImageView likeImage;
-    TextView counterFeedback;
+    TextView counterFeedback, nome_documento, descrizione_documento, nome_universita, nome_facolta, nome_insegnamento, nome_autore;
+    CaricamentoDAO caricamentoDAO;
     ImageView visualizzaDocumento;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.layout_pagina_documento);
 
         likeImage = findViewById(R.id.imageFeedback);
         counterFeedback = findViewById(R.id.counterFeedback);
+        nome_autore = findViewById(R.id.nome_autore);
         visualizzaDocumento = findViewById(R.id.visualizzaDocumento);
+        nome_documento = findViewById(R.id.nome_documento);
+        descrizione_documento = findViewById(R.id.nome_descrizione);
+        nome_universita = findViewById(R.id.nome_universita);
+        nome_facolta = findViewById(R.id.nome_facolta);
+        nome_insegnamento = findViewById(R.id.nome_insegnamento);
+        caricamentoDAO = new CaricamentoDAO(getApplicationContext());
+
+        Documento d = (Documento) getIntent().getSerializableExtra("documento");
+        Log.d("nomeAutore", "Nome autore: " + caricamentoDAO.getAutore(d.getId_documento()));
+
+        nome_documento.setText(d.getNome());
+        nome_autore.setText(caricamentoDAO.getAutore(d.getId_documento()));
+        descrizione_documento.setText(d.getDescrizione());
+        nome_universita.setText(d.getUniversita());
+        nome_facolta.setText(d.getFacolta());
+        nome_insegnamento.setText(d.getCorso_di_studio());
+
 
         //Listener tasto like
         likeImage.setOnClickListener(new View.OnClickListener() {

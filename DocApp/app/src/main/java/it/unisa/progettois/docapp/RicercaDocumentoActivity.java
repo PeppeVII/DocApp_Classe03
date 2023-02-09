@@ -114,11 +114,11 @@ public class RicercaDocumentoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
             else{
-                Intent intent = new Intent(getApplicationContext(), ProfiloActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ErrorPage.class);
                 startActivity(intent);
             }
         }catch(Exception exception){
-            Toast.makeText(this, "Errore nell'esecuzione, riempire i form del filtraggio", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Errore nell'esecuzione, riempire i form del filtraggio " + exception.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 }

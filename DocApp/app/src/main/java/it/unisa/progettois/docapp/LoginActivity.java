@@ -51,7 +51,6 @@ public class LoginActivity extends AppCompatActivity {
             editor.putString("email", email);
             editor.putString("password", password);
             editor.commit();
-            Toast.makeText(this, "Studente di nome -> " + studente.getNickname() + " e admin uguale a -> " + studente.isIs_admin(), Toast.LENGTH_LONG).show();
             Intent intent = new Intent(getApplicationContext(), HomepageActivity.class);
             startActivity(intent);
 

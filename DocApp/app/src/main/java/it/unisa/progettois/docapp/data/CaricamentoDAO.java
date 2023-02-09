@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import it.unisa.progettois.docapp.facade.Facade;
 
@@ -45,4 +46,19 @@ public class CaricamentoDAO implements Facade {
         }
         return null;
     }
+
+
+    public String getAutore(int id){
+        String[] selectionArgs = {String.valueOf(id)};
+
+        String query = "SELECT s.nickname FROM Studente s JOIN Caricamento c ON s.email = c.studente WHERE c.documento = ?";
+        Cursor cursor = db.rawQuery(query, selectionArgs);
+
+        if(cursor.moveToFirst()){
+            @SuppressLint("Range") String autore = cursor.getString(0);
+            return autore;
+        }
+        return null;
+    }
+
 }

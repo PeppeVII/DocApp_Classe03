@@ -45,68 +45,17 @@
             android:textColor="@android:color/black"
             android:textSize="@dimen/textSize_medium"/>
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
             <LinearLayout
-                android:weightSum="15"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-                <FrameLayout
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="#2271b3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-                <LinearLayout
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="#2271b3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-                <LinearLayout
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="#2271b3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#2271b3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
+                <ListView
+                    android:id="@+id/documenti_pertinenti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
-        </HorizontalScrollView>
 
     </LinearLayout>
 

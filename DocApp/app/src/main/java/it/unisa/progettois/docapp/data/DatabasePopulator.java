@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabasePopulator extends SQLiteOpenHelper {
-    public static final int DATABASE_VERSION = 5;
+    public static final int DATABASE_VERSION = 8;
     public static final String DATABASE_NAME = "Docapp.db";
     private static final String SQL_CREATE_STUDENT =
             "CREATE TABLE Studente" + "(" +
@@ -101,12 +101,27 @@ public class DatabasePopulator extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO Studente(email, nickname, password, is_admin) VALUES ('admin@gmail.com', 'giuseppe', 'admin', 1);");
         db.execSQL("INSERT INTO Studente(email, nickname, password, is_admin) VALUES ('admin1@gmail.com', 'tonino', 'admin', 1);");
         db.execSQL("INSERT INTO Studente(email, nickname, password, is_admin) VALUES ('g.napolitano80@studenti.unisa.it', 'nerone', 'prova123', 0)");
+        db.execSQL("INSERT INTO Studente(email, nickname, password, is_admin) VALUES ('a.russomando11@studenti.unisa.it', 'toninodb', 'prova123', 0)");
+        db.execSQL("INSERT INTO Studente(email, nickname, password, is_admin) VALUES ('f.bosso4@studenti.unisa.it', 'bosso', 'prova123', 0)");
+        db.execSQL("INSERT INTO Studente(email, nickname, password, is_admin) VALUES ('g.dambrosio63@studenti.unisa.it', 'pepp', 'prova123', 0)");
 
         db.execSQL("INSERT INTO Documento(id, nome, descrizione, universita, facolta, corso_di_studio, percorso, dimensione) VALUES (1, 'Forza Napoli', 'Se ti piace il napoli, adorerai il napoli live', 'Università degli Studi del Sannio', 'Informatica', 'Analisi Matematica', 'it/unisa/progettois/docapp/documenti/Appunti_FIA.pdf', 20)");
         db.execSQL("INSERT INTO Documento(id, nome, descrizione, universita, facolta, corso_di_studio, percorso, dimensione) VALUES (2, 'Forza Messina', 'Messina grande uomo', 'Università degli Studi del Sannio', 'Informatica', 'Analisi Matematica', 'it/unisa/progettois/docapp/documenti/Appunti_RDC.pdf', 30)");
         db.execSQL("INSERT INTO Documento(id, nome, descrizione, universita, facolta, corso_di_studio, percorso, dimensione) VALUES (3, 'Forza Juve', 'Juve squadra ladra', 'Università degli Studi di Napoli Federico II', 'Matematica', 'Algebra Commutativa', 'it/unisa/progettois/docapp/documenti/so.pdf', 30)");
         db.execSQL("INSERT INTO Documento(id, nome, descrizione, universita, facolta, corso_di_studio, percorso, dimensione) VALUES (4, 'Forza Salerno', 'Sto finendo le squadre che conosco', 'Università degli Studi di Salerno', 'Ingegneria Informatica', 'Analisi Matematica I', 'it/unisa/progettois/docapp/documenti/Programmazione_I.pdf', 40)");
         db.execSQL("INSERT INTO Documento(id, nome, descrizione, universita, facolta, corso_di_studio, percorso, dimensione) VALUES (5, 'Forza Milan', 'Banda di Pisciaiuoli', 'Università degli Studi di Salerno', 'Ingegneria Informatica', 'Analisi Matematica I', 'it/unisa/progettois/docapp/documenti/pythonlearn.pdf', 50)");
+
+        db.execSQL("INSERT INTO Caricamento(documento, studente) VALUES (1, 'g.napolitano80@studenti.unisa.it');");
+        db.execSQL("INSERT INTO Caricamento(documento, studente) VALUES (2, 'g.napolitano80@studenti.unisa.it');");
+        db.execSQL("INSERT INTO Caricamento(documento, studente) VALUES (3, 'a.russomando11@studenti.unisa.it');");
+        db.execSQL("INSERT INTO Caricamento(documento, studente) VALUES (4, 'a.russomando11@studenti.unisa.it');");
+        db.execSQL("INSERT INTO Caricamento(documento, studente) VALUES (5, 'f.bosso4@studenti.unisa.it');");
+
+        db.execSQL("INSERT INTO DocumentiVisualizzati(documento, studente) VALUES (1, 'g.napolitano80@studenti.unisa.it');");
+        db.execSQL("INSERT INTO DocumentiVisualizzati(documento, studente) VALUES (2, 'g.napolitano80@studenti.unisa.it');");
+        db.execSQL("INSERT INTO DocumentiVisualizzati(documento, studente) VALUES (3, 'a.russomando11@studenti.unisa.it');");
+        db.execSQL("INSERT INTO DocumentiVisualizzati(documento, studente) VALUES (4, 'a.russomando11@studenti.unisa.it');");
+        db.execSQL("INSERT INTO DocumentiVisualizzati(documento, studente) VALUES (5, 'f.bosso4@studenti.unisa.it');");
     }
 
     @Override

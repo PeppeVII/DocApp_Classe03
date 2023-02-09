@@ -199,6 +199,9 @@ public class CaricaDocumentoActivity extends AppCompatActivity {
             else if(list.contains(descrizioneD))
                 Toast.makeText(this, "Non si dicono queste parole birbantello", Toast.LENGTH_LONG).show();
 
+            else if(pdf_path.isEmpty() || pdf_path.length() == 0)
+                Toast.makeText(this, "Perfavore inserire un documento da caricare", Toast.LENGTH_LONG).show();
+
             Documento d = documentoDAO.inserisciDocumento(nomeD, descrizioneD, universita_scelta, facolta_scelta, insegnamento_scelto, pdf_path, weight_pdf);
             boolean tmp = facade.inserisci(d.getId_documento(), studente.getEmail());
             Caricamento caricamento = (Caricamento) facade.ottieni(d.getId_documento(), studente.getEmail());
