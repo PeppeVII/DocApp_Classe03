@@ -32,6 +32,7 @@ public class RicercaDocumentoActivity extends AppCompatActivity {
         spinnerUniversita = findViewById(R.id.spinnerUniversita);
         spinnerInsegnamento = findViewById(R.id.spinnerInsegnamento);
 
+
         //Implementazione arrayAdapter spinner Università
         ArrayAdapter<CharSequence> adapterU = ArrayAdapter.createFromResource(this,
                 R.array.spinner_universita, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
