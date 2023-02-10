@@ -1,12 +1,11 @@
 package it.unisa.progettois.docapp.data;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabasePopulator extends SQLiteOpenHelper {
-    public static final int DATABASE_VERSION = 8;
+    public static final int DATABASE_VERSION = 9;
     public static final String DATABASE_NAME = "Docapp.db";
     private static final String SQL_CREATE_STUDENT =
             "CREATE TABLE Studente" + "(" +
@@ -68,7 +67,7 @@ public class DatabasePopulator extends SQLiteOpenHelper {
     private static final String SQL_CREATE_CONVERSAZIONE =
             "CREATE TABLE Conversazione" + "(" +
             "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-            "nome_conservazione TEXT NOT NULL," +
+            "nome_conversazione TEXT NOT NULL," +
             "studente TEXT NOT NULL," +
             "FOREIGN KEY (studente) REFERENCES Studente(email));";
 
@@ -123,8 +122,8 @@ public class DatabasePopulator extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO DocumentiVisualizzati(documento, studente) VALUES (4, 'a.russomando11@studenti.unisa.it');");
         db.execSQL("INSERT INTO DocumentiVisualizzati(documento, studente) VALUES (5, 'f.bosso4@studenti.unisa.it');");
 
-        db.execSQL("INSERT INTO Conversazione(id, nome_conversazione, studente) VALUES (1, 'Chat goliardica', 'g.napolitano80@studenti.unisa.it');");
-        db.execSQL("INSERT INTO Conversazione(id, nome_conversazione, studente) VALUES (2, 'Chat goliardica', 'a.russomando11@studenti.unisa.it')");
+        db.execSQL("INSERT INTO Conversazione(id, nome_conversazione, studente) VALUES (1, 'a.russomando11@studenti.unisa.it', 'g.napolitano80@studenti.unisa.it');");
+        db.execSQL("INSERT INTO Conversazione(id, nome_conversazione, studente) VALUES (2, 'g.napolitano80@studenti.unisa.it', 'a.russomando11@studenti.unisa.it')");
 
         db.execSQL("INSERT INTO Messaggio(id, conversazione, studente, testo, timestamp_msg) VALUES (1, 1, 'g.napolitano80@studenti.unisa.it', 'Ciao toni sei un bravo ragazzo', '2020-12-31 23:40:50')");
         db.execSQL("INSERT INTO Messaggio(id, conversazione, studente, testo, timestamp_msg) VALUES (2, 1, 'g.napolitano80@studenti.unisa.it', 'Come stai?', '2020-12-31 23:40:55')");

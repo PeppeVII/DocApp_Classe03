@@ -1,4 +1,4 @@
-package it.unisa.progettois.docapp;
+package it.unisa.progettois.docapp.logic;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import it.unisa.progettois.docapp.R;
 
 public class RegistrazioneActivity extends AppCompatActivity{
     Button bottoneRegistrazione;

@@ -1,11 +1,8 @@
-package it.unisa.progettois.docapp;
+package it.unisa.progettois.docapp.logic;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,10 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.Serializable;
-import java.sql.SQLException;
-
-import it.unisa.progettois.docapp.data.DatabasePopulator;
+import it.unisa.progettois.docapp.R;
 import it.unisa.progettois.docapp.data.Studente;
 import it.unisa.progettois.docapp.data.StudenteDAO;
 

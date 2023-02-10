@@ -1,4 +1,4 @@
-package it.unisa.progettois.docapp;
+package it.unisa.progettois.docapp.logic;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
+
+import it.unisa.progettois.docapp.R;
 
 public class Fragment_Filtro extends Fragment {
     ImageView documento1, documento2, documento3, documento4, documento5;

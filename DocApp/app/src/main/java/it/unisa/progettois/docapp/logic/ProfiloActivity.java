@@ -1,14 +1,14 @@
-package it.unisa.progettois.docapp;
+package it.unisa.progettois.docapp.logic;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import it.unisa.progettois.docapp.R;
 import it.unisa.progettois.docapp.data.Studente;
 import it.unisa.progettois.docapp.data.StudenteDAO;
 

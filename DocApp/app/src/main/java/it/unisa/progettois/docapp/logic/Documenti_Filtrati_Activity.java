@@ -1,4 +1,4 @@
-package it.unisa.progettois.docapp;
+package it.unisa.progettois.docapp.logic;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +11,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
 
+import it.unisa.progettois.docapp.R;
 import it.unisa.progettois.docapp.data.Documento;
 
 public class Documenti_Filtrati_Activity extends AppCompatActivity {
     ListView listView;
-    ItemAdapater item;
+    ItemAdapaterDocumenti item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -28,7 +29,7 @@ public class Documenti_Filtrati_Activity extends AppCompatActivity {
         for(Documento d : list_documenti)
             Log.d("Documenti", "Eccoli: " + d.getId_documento());
 
-        item = new ItemAdapater(getApplicationContext(), list_documenti);
+        item = new ItemAdapaterDocumenti(getApplicationContext(), list_documenti);
         listView.setAdapter(item);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

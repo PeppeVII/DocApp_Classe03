@@ -1,4 +1,4 @@
-package it.unisa.progettois.docapp;
+package it.unisa.progettois.docapp.logic;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -22,6 +22,7 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
+import it.unisa.progettois.docapp.R;
 import it.unisa.progettois.docapp.data.Caricamento;
 import it.unisa.progettois.docapp.data.CaricamentoDAO;
 import it.unisa.progettois.docapp.data.Documento;

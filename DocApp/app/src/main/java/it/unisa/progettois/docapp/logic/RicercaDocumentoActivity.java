@@ -1,4 +1,4 @@
-package it.unisa.progettois.docapp;
+package it.unisa.progettois.docapp.logic;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.io.Serializable;
 import java.util.List;
 
+import it.unisa.progettois.docapp.R;
 import it.unisa.progettois.docapp.data.Documento;
 import it.unisa.progettois.docapp.data.DocumentoDAO;
 

@@ -6,7 +6,7 @@
     android:layout_marginTop="-100dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AvvioApplicazione">
+    tools:context=".logic.AvvioApplicazione">
 
     <ImageView
         android:layout_width="wrap_content"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="it.unisa.progettois.docapp.HomepageActivity">
+    tools:context="it.unisa.progettois.docapp.logic.HomepageActivity">
 
 
     <!-- LAYOUT BOTTONE RICERCA DOCUMENTI-->

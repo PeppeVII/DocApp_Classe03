@@ -1,26 +1,21 @@
-package it.unisa.progettois.docapp;
+package it.unisa.progettois.docapp.logic;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import it.unisa.progettois.docapp.R;
 import it.unisa.progettois.docapp.data.Documenti_VisualizzatiDAO;
 import it.unisa.progettois.docapp.data.Documento;
 import it.unisa.progettois.docapp.data.Studente;
-import it.unisa.progettois.docapp.data.StudenteDAO;
 
 public class HomepageActivity extends AppCompatActivity
 {
@@ -29,7 +24,7 @@ public class HomepageActivity extends AppCompatActivity
     Studente studente;
     ListView listView;
     Documenti_VisualizzatiDAO documenti_visualizzatiDAO;
-    ItemAdapater item;
+    ItemAdapaterDocumenti item;
 
     @Override
     protected void onCreate(Bundle savedIstanceState) {
@@ -46,7 +41,7 @@ public class HomepageActivity extends AppCompatActivity
         documenti_visualizzatiDAO = new Documenti_VisualizzatiDAO(getApplicationContext());
         List<Documento> documenti_pertinenti = documenti_visualizzatiDAO.getDocumentiPertinenti();
 
-        item = new ItemAdapater(getApplicationContext(), documenti_pertinenti);
+        item = new ItemAdapaterDocumenti(getApplicationContext(), documenti_pertinenti);
         listView.setAdapter(item);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -66,6 +61,11 @@ public class HomepageActivity extends AppCompatActivity
 
         carica.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), CaricaDocumentoActivity.class);
+            startActivity(intent);
+        });
+
+        chat.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
             startActivity(intent);
         });
     }

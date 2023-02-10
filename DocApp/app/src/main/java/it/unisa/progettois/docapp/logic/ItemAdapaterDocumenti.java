@@ -1,4 +1,4 @@
-package it.unisa.progettois.docapp;
+package it.unisa.progettois.docapp.logic;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,10 +9,11 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import it.unisa.progettois.docapp.R;
 import it.unisa.progettois.docapp.data.Documento;
 
-public class ItemAdapater extends ArrayAdapter<Documento> {
-    public ItemAdapater(Context context, List<Documento> documenti){
+public class ItemAdapaterDocumenti extends ArrayAdapter<Documento> {
+    public ItemAdapaterDocumenti(Context context, List<Documento> documenti){
         super(context, 0, documenti);
     }
 

@@ -1,5 +1,6 @@
-package it.unisa.progettois.docapp;
+package it.unisa.progettois.docapp.logic;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import it.unisa.progettois.docapp.R;
 import it.unisa.progettois.docapp.data.CaricamentoDAO;
 import it.unisa.progettois.docapp.data.Documento;
 import it.unisa.progettois.docapp.data.Feedback;
@@ -28,6 +31,7 @@ public class DocumentoActivity extends AppCompatActivity {
     StudenteDAO studenteDAO;
     SharedPreferences sharedPreferences;
 
+    @SuppressLint("CutPasteId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -41,4 +41,17 @@ public class StudenteDAO {
         }
         return null;
     }
+
+    public String getNickname(String email){
+        String[] selectionArgs = {email};
+        String query = "SELECT Studente.nickname FROM Studente WHERE Studente.email = ?";
+
+        Cursor cursor = db.rawQuery(query, selectionArgs);
+
+        if (cursor.moveToFirst()){
+            @SuppressLint("Range") String nickname = cursor.getString(cursor.getColumnIndex("nickname"));
+            return nickname;
+        }
+        return null;
+    }
 }
