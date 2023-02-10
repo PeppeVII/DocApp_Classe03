@@ -60,5 +60,4 @@ public class CaricamentoDAO implements Facade {
         }
         return null;
     }
-
 }

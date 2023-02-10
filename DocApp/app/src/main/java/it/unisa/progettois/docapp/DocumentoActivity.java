@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -63,24 +64,6 @@ public class DocumentoActivity extends AppCompatActivity {
         nome_facolta.setText(d.getFacolta());
         nome_insegnamento.setText(d.getCorso_di_studio());
 
-        likeImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(feedbackDAO.ottieni(d.getId_documento(), studente.getEmail()) == null){
-                    if(feedbackDAO.inserisci(d.getId_documento(), studente.getEmail())){
-                        likeImage.setImageResource(R.mipmap.blue_like_is);
-                        likeImage.setContentDescription("blue_like");
-                        counter_feedback.setText("" + feedbackDAO.counterFeedback(d.getId_documento()));
-                    }
-                }else{
-                    likeImage.setImageResource(R.mipmap.black_like_is);
-                    likeImage.setContentDescription("black_like");
-                    if(feedbackDAO.rimuoviFeedback(d.getId_documento(), studente.getEmail())){
-                        counter_feedback.setText("" + feedbackDAO.counterFeedback(d.getId_documento()));
-                    }
-                }
-            }
-        });
 
         //Listener visualizzazione documento
         visualizzaDocumento.setOnClickListener(new View.OnClickListener() {
@@ -89,5 +72,25 @@ public class DocumentoActivity extends AppCompatActivity {
                 //openPdf(getFilesDir().getPath());
             }
         });
+    }
+
+    public void inserisciFeedback(View view){
+        try{
+            if(feedbackDAO.ottieni(d.getId_documento(), studente.getEmail()) == null){
+                if(feedbackDAO.inserisci(d.getId_documento(), studente.getEmail())){
+                    likeImage.setImageResource(R.mipmap.blue_like_is);
+                    likeImage.setContentDescription("blue_like");
+                    counter_feedback.setText("" + feedbackDAO.counterFeedback(d.getId_documento()));
+                }
+            }else{
+                likeImage.setImageResource(R.mipmap.black_like_is);
+                likeImage.setContentDescription("black_like");
+                if(feedbackDAO.rimuoviFeedback(d.getId_documento(), studente.getEmail())){
+                    counter_feedback.setText("" + feedbackDAO.counterFeedback(d.getId_documento()));
+                }
+            }
+        }catch (Exception exception){
+            Toast.makeText(this, "Il feedback non è stato inserito correttamente", Toast.LENGTH_SHORT).show();
+        }
     }
 }
