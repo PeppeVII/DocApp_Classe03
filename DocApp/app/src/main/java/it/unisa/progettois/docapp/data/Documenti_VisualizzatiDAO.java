@@ -66,6 +66,7 @@ public class Documenti_VisualizzatiDAO implements Facade {
 
             if(cursor1.moveToFirst()) {
                 d = new Documento(cursor1.getString(cursor1.getColumnIndex("nome")), cursor1.getString(cursor1.getColumnIndex("descrizione")), cursor1.getString(cursor1.getColumnIndex("universita")), cursor1.getString(cursor1.getColumnIndex("facolta")), cursor1.getString(cursor1.getColumnIndex("corso_di_studio")), cursor1.getString(cursor1.getColumnIndex("percorso")), cursor1.getInt(cursor1.getColumnIndex("dimensione")));
+                d.setId_documento(cursor1.getInt(cursor1.getColumnIndex("id")));
                 lista_documenti.add(d);
             }
         }

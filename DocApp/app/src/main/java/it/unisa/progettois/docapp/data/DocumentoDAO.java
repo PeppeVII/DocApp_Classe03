@@ -38,7 +38,9 @@ public class DocumentoDAO{
 
         if(cursor.moveToFirst()){
             do {
-                documenti.add(new Documento(cursor.getString(cursor.getColumnIndex("nome")), cursor.getString(cursor.getColumnIndex("descrizione")), cursor.getString(cursor.getColumnIndex("universita")), cursor.getString(cursor.getColumnIndex("facolta")), cursor.getString(cursor.getColumnIndex("corso_di_studio")), cursor.getString(cursor.getColumnIndex("percorso")), cursor.getInt(cursor.getColumnIndex("dimensione"))));
+                Documento d = new Documento(cursor.getString(cursor.getColumnIndex("nome")), cursor.getString(cursor.getColumnIndex("descrizione")), cursor.getString(cursor.getColumnIndex("universita")), cursor.getString(cursor.getColumnIndex("facolta")), cursor.getString(cursor.getColumnIndex("corso_di_studio")), cursor.getString(cursor.getColumnIndex("percorso")), cursor.getInt(cursor.getColumnIndex("dimensione")));
+                d.setId_documento(cursor.getInt(cursor.getColumnIndex("id")));
+                documenti.add(d);
             }while (cursor.moveToNext());
         }
         cursor.close();

@@ -51,11 +51,11 @@ public class CaricamentoDAO implements Facade {
     public String getAutore(int id){
         String[] selectionArgs = {String.valueOf(id)};
 
-        String query = "SELECT s.nickname FROM Studente s JOIN Caricamento c ON s.email = c.studente";
+        String query = "SELECT s.nickname FROM Studente s JOIN Caricamento c ON s.email = c.studente WHERE c.documento = ?";
         Cursor cursor = db.rawQuery(query, selectionArgs);
 
         if(cursor.moveToFirst()){
-            @SuppressLint("Range") String autore = cursor.getString(0);
+            @SuppressLint("Range") String autore = cursor.getString(cursor.getColumnIndex("nickname"));
             return autore;
         }
         return null;

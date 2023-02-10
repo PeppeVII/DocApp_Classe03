@@ -23,8 +23,8 @@ public class RicercaDocumentoActivity extends AppCompatActivity {
     private DocumentoDAO documentoDAO;
 
     @Override
-    protected void onCreate(Bundle savedIstanceState){
-        super.onCreate(savedIstanceState);
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_cercadocumento);
 
         documentoDAO = new DocumentoDAO(getApplicationContext());
@@ -109,7 +109,7 @@ public class RicercaDocumentoActivity extends AppCompatActivity {
             List<Documento> documentoArrayList = documentoDAO.retreiveByFiltraggio(universita_scelta, facolta_scelta, insegnamento_scelto);
             Log.d("Lista", "Lista size -> " + documentoArrayList.size());
             if(documentoArrayList.size() > 0) {
-                Intent intent = new Intent(getApplicationContext(), HomepageActivity.class);
+                Intent intent = new Intent(getApplicationContext(), Documenti_Filtrati_Activity.class);
                 intent.putExtra("lista_documenti", (Serializable) documentoArrayList);
                 startActivity(intent);
             }
