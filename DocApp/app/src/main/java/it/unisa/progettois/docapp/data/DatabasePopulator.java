@@ -122,6 +122,16 @@ public class DatabasePopulator extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO DocumentiVisualizzati(documento, studente) VALUES (3, 'a.russomando11@studenti.unisa.it');");
         db.execSQL("INSERT INTO DocumentiVisualizzati(documento, studente) VALUES (4, 'a.russomando11@studenti.unisa.it');");
         db.execSQL("INSERT INTO DocumentiVisualizzati(documento, studente) VALUES (5, 'f.bosso4@studenti.unisa.it');");
+
+        db.execSQL("INSERT INTO Conversazione(id, nome_conversazione, studente) VALUES (1, 'Chat goliardica', 'g.napolitano80@studenti.unisa.it');");
+        db.execSQL("INSERT INTO Conversazione(id, nome_conversazione, studente) VALUES (2, 'Chat goliardica', 'a.russomando11@studenti.unisa.it')");
+
+        db.execSQL("INSERT INTO Messaggio(id, conversazione, studente, testo, timestamp_msg) VALUES (1, 1, 'g.napolitano80@studenti.unisa.it', 'Ciao toni sei un bravo ragazzo', '2020-12-31 23:40:50')");
+        db.execSQL("INSERT INTO Messaggio(id, conversazione, studente, testo, timestamp_msg) VALUES (2, 1, 'g.napolitano80@studenti.unisa.it', 'Come stai?', '2020-12-31 23:40:55')");
+        db.execSQL("INSERT INTO Messaggio(id, conversazione, studente, testo, timestamp_msg) VALUES (3, 2, 'a.russomando11@studenti.unisa.it', 'Ciao peppe, tutto bene', '2020-12-31 23:41:50')");
+        db.execSQL("INSERT INTO Messaggio(id, conversazione, studente, testo, timestamp_msg) VALUES (4, 2, 'a.russomando11@studenti.unisa.it', 'Ti voglio bene', '2020-12-31 23:42:50')");
+        db.execSQL("INSERT INTO Messaggio(id, conversazione, studente, testo, timestamp_msg) VALUES (5, 1, 'g.napolitano80@studenti.unisa.it', 'Cosa fai di bello?', '2020-12-31 23:45:50')");
+        db.execSQL("INSERT INTO Messaggio(id, conversazione, studente, testo, timestamp_msg) VALUES (6, 1, 'g.napolitano80@studenti.unisa.it', 'Io sto vedendo dei documenti', '2020-12-31 23:46:50')");
     }
 
     @Override

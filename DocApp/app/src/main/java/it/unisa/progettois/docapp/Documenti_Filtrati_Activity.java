@@ -26,7 +26,7 @@ public class Documenti_Filtrati_Activity extends AppCompatActivity {
         List<Documento> list_documenti = (List<Documento>) getIntent().getSerializableExtra("lista_documenti");
 
         for(Documento d : list_documenti)
-            Log.d("Documenti", "Eccoli: " + d.getCorso_di_studio());
+            Log.d("Documenti", "Eccoli: " + d.getId_documento());
 
         item = new ItemAdapater(getApplicationContext(), list_documenti);
         listView.setAdapter(item);

@@ -29,7 +29,7 @@ public class FeedbackDAO implements Facade {
     @Override
     public boolean inserisci(int id, String email) {
         String[] selectionArgs = {String.valueOf(id), email};
-        db.execSQL("INSERT INTO Feedback (documento, studente) VALUES (?,?)");
+        db.execSQL("INSERT INTO Feedback (documento, studente) VALUES (?,?)", selectionArgs);
         return true;
     }
 
@@ -46,5 +46,24 @@ public class FeedbackDAO implements Facade {
             return feedback;
         }
         return null;
+    }
+
+    public int counterFeedback(int id){
+        int cont = 0;
+        String[] selectionArgs = {String.valueOf(id)};
+        String query = "SELECT COUNT(documento) as numero FROM Feedback f WHERE f.documento = ? GROUP BY f.documento";
+        Cursor cursor = db.rawQuery(query, selectionArgs);
+
+        if(cursor.moveToFirst()){
+            cont = cursor.getInt(0);
+            return cont;
+        }
+        return 0;
+    }
+
+    public boolean rimuoviFeedback(int id, String email){
+        String[] selectionArgs = {String.valueOf(id), email};
+        db.execSQL("DELETE FROM Feedback WHERE Feedback.documento = ? AND Feedback.studente = ?", selectionArgs);
+        return true;
     }
 }

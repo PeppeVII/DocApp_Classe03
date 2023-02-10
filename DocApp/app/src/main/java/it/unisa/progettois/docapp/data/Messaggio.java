@@ -3,32 +3,31 @@ package it.unisa.progettois.docapp.data;
 import java.sql.Timestamp;
 
 public class Messaggio {
-    private String  email_studente, testo, id_messaggio;
-    private int id_conversazione;
-    private Timestamp tms;
+    private String  email_studente, testo, tms;
+    private int id_conversazione, id_messaggio;
 
     public Messaggio(){}
 
-    public Messaggio(int id_conversazione, String email_studente, String testo, Timestamp tms){
+    public Messaggio(int id_conversazione, String email_studente, String testo, String tms){
         this.email_studente = email_studente;
         this.id_conversazione = id_conversazione;
         this.testo = testo;
         this.tms = tms;
     }
 
-    public String getId_messaggio() {
-        return id_messaggio;
-    }
-
-    public void setId_messaggio(String id_messaggio) {
+    public void setId_messaggio(int id_messaggio){
         this.id_messaggio = id_messaggio;
     }
 
-    public Timestamp getTms() {
-        return tms;
+    public int getId_messaggio(){
+        return this.id_messaggio;
     }
 
-    public void setTms(Timestamp tms) {
+    public String getTms(){
+        return this.tms;
+    }
+
+    public void setTms(String tms){
         this.tms = tms;
     }
 
