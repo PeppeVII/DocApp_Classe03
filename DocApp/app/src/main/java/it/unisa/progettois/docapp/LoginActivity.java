@@ -20,9 +20,16 @@ public class LoginActivity extends AppCompatActivity {
         emailLogin = findViewById(R.id.emailLogin);
         passwordLogin = findViewById(R.id.passwordLogin);
 
+
+
         buttonAccedi.setOnClickListener(v -> {
+
+
             Intent intent = new Intent(getApplicationContext(), HomepageActivity.class);
             startActivity(intent);
+
+
+
         });
     }
 
