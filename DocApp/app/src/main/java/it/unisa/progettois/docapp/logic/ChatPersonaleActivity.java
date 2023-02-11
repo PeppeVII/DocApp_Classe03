@@ -63,9 +63,10 @@ public class ChatPersonaleActivity extends AppCompatActivity {
         try{
             String messaggio = et_messaggio.getText().toString();
 
-            if(messaggio.length() == 0 || messaggio.isEmpty())
+            if(messaggio.length() == 0 || messaggio.isEmpty()) {
                 Toast.makeText(this, "Impossibile inviare messaggio vuoto", Toast.LENGTH_SHORT).show();
-
+                return;
+            }
             for(String element : list){
                 if(messaggio.contains(element) || messaggio.equalsIgnoreCase(element))
                     messaggio = messaggio.replace(element, "***");

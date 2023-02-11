@@ -51,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
             }
             else{
                 Toast.makeText(getApplicationContext(), "Email o password errate", Toast.LENGTH_LONG).show();
+                return;
             }
 
         }catch (Exception exception){
