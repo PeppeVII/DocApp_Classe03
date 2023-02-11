@@ -65,6 +65,10 @@
         <activity android:name=".logic.ChatActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".logic.PDFActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
     </application>
 
 </manifest>

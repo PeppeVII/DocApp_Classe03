@@ -1,6 +1,7 @@
 package it.unisa.progettois.docapp.logic;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,7 +32,7 @@ public class DocumentoActivity extends AppCompatActivity {
     StudenteDAO studenteDAO;
     SharedPreferences sharedPreferences;
 
-    @SuppressLint("CutPasteId")
+    @SuppressLint({"CutPasteId", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,11 +74,14 @@ public class DocumentoActivity extends AppCompatActivity {
         visualizzaDocumento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //openPdf(getFilesDir().getPath());
+                Intent intent = new Intent(getApplicationContext(), PDFActivity.class);
+                intent.putExtra("percorso", d.getPath());
+                startActivity(intent);
             }
         });
     }
 
+    @SuppressLint("SetTextI18n")
     public void inserisciFeedback(View view){
         try{
             if(feedbackDAO.ottieni(d.getId_documento(), studente.getEmail()) == null){
