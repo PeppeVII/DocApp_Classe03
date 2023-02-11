@@ -35,9 +35,8 @@ public class MessaggioDAO {
             Messaggio messaggio = new Messaggio(cursor.getInt(cursor.getColumnIndex("conversazione")), cursor.getString(cursor.getColumnIndex("studente")), cursor.getString(cursor.getColumnIndex("testo")), cursor.getString(cursor.getColumnIndex("timestamp_msg")));
             messaggio.setId_messaggio(cursor.getInt(cursor.getColumnIndex("id")));
             list.add(messaggio);
-            return list;
         }
-        return null;
+        return list;
     }
 
     public boolean inserimentoMessaggio(int conversazione, String studente, String testo){

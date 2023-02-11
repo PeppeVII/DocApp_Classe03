@@ -41,12 +41,17 @@ public class LoginActivity extends AppCompatActivity {
         try {
             Studente studente = studenteDAO.effettuaLogin(email, password);
 
-            editor.putBoolean("is_logged", true);
-            editor.putString("email", email);
-            editor.putString("password", password);
-            editor.commit();
-            Intent intent = new Intent(getApplicationContext(), HomepageActivity.class);
-            startActivity(intent);
+            if(studente != null) {
+                editor.putBoolean("is_logged", true);
+                editor.putString("email", email);
+                editor.putString("password", password);
+                editor.commit();
+                Intent intent = new Intent(getApplicationContext(), HomepageActivity.class);
+                startActivity(intent);
+            }
+            else{
+                Toast.makeText(getApplicationContext(), "Email o password errate", Toast.LENGTH_LONG).show();
+            }
 
         }catch (Exception exception){
             Toast.makeText(getApplicationContext(), "Errore nell'input", Toast.LENGTH_SHORT).show();

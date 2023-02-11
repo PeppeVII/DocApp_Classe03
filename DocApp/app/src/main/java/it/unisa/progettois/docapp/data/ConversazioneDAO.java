@@ -48,4 +48,16 @@ public class ConversazioneDAO {
 
         return destinatari;
     }
+
+    public int getId_Conversazione(String destinatario, String mittente){
+        String[] selectionArgs = {destinatario, mittente};
+        String query = "SELECT c.id FROM Conversazione c WHERE c.nome_conversazione = ? AND c.studente = ?";
+        Cursor cursor = db.rawQuery(query, selectionArgs);
+
+        if(cursor.moveToFirst()){
+            int id = cursor.getInt(0);
+            return id;
+        }
+        return 0;
+    }
 }

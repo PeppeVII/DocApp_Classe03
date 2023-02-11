@@ -45,15 +45,11 @@ public class ChatActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplicationContext(), HomepageActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ChatPersonaleActivity.class);
                 Studente studente1 = (Studente) parent.getItemAtPosition(position);
                 intent.putExtra("destinatario", studente1);
                 startActivity(intent);
             }
         });
-
-        for ( Studente s : destinatari) {
-            Log.d("Studenti", "Porcoddio: "+ s.getEmail());
-        }
     }
 }

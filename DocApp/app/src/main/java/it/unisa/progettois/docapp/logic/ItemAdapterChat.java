@@ -1,5 +1,7 @@
 package it.unisa.progettois.docapp.logic;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;
@@ -17,17 +19,19 @@ import it.unisa.progettois.docapp.data.Studente;
 import it.unisa.progettois.docapp.data.StudenteDAO;
 
 public class ItemAdapterChat extends ArrayAdapter<Messaggio> {
-
     private StudenteDAO studenteDAO;
     private SharedPreferences sharedPreferences;
+    private Studente studente;
 
     public ItemAdapterChat(Context context, List<Messaggio> messaggi){
         super(context, 0, messaggi);
+        sharedPreferences = context.getSharedPreferences("MY_SHARED_PREF", MODE_PRIVATE);
+        studenteDAO = new StudenteDAO(context);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Studente studente = studenteDAO.effettuaLogin(sharedPreferences.getString("email", ""), sharedPreferences.getString("password", ""));
+        studente = studenteDAO.effettuaLogin(sharedPreferences.getString("email", ""), sharedPreferences.getString("password", ""));
         Messaggio messaggio = getItem(position);
         studenteDAO = new StudenteDAO(getContext());
 

@@ -182,7 +182,6 @@ public class CaricaDocumentoActivity extends AppCompatActivity {
     public void caricamento(View v){
         try {
             nomeD = nomeDocumento.getText().toString();
-            Log.d("nomeDocumento", "Boh: " + nomeD);
             descrizioneD = descrizioneDocumento.getText().toString();
             universita_scelta = spinnerUniversita.getSelectedItem().toString();
             facolta_scelta = spinnerFacolta.getSelectedItem().toString();
@@ -214,7 +213,6 @@ public class CaricaDocumentoActivity extends AppCompatActivity {
             }
         }catch (Exception exc){
             Toast.makeText(this, "Errore nel caricamento del file", Toast.LENGTH_LONG).show();
-            Log.d("eccezione", exc.getMessage());
         }
     }
 }
