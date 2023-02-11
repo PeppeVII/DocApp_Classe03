@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!--LAYOUT INTESTAZIONE-->
+    <LinearLayout
+        android:gravity="center"
+        android:background="#2271b3"
+        android:layout_weight="0.49"
+        android:layout_width="match_parent"
+        android:layout_height= "0dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#2271b3"
+            android:text="CHAT"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_medium" />
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lista_item_chat"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

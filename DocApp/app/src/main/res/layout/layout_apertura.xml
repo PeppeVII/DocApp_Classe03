@@ -10,22 +10,22 @@
         android:gravity="center">
 
         <ImageView
-            android:id="@+id/immagineApplicazione"
-            android:layout_width="203dp"
-            android:layout_height="116dp"
-            android:src="@mipmap/logo"></ImageView>
+            android:layout_width="355sp"
+            android:layout_height="100sp"
+            android:src="@mipmap/titolo_is"/>
 
         <Button
+            android:textSize="@dimen/textSize_medium"
             android:id="@+id/bottonePerRegistrazione"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#2271B3"
-            android:layout_gravity="center"
             android:onClick="registration"
             android:text="Registrati">
         </Button>
 
         <Button
+            android:textSize="@dimen/textSize_medium"
             android:id="@+id/bottonePerLogin"
             android:onClick="login"
             android:layout_width="wrap_content"
