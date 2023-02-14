@@ -1,4 +1,4 @@
-package it.unisa.progettois.docapp;
+package it.unisa.progettois.docapp.logic;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +17,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -26,8 +27,12 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import it.unisa.progettois.docapp.R;
 
 public class RegistrazioneActivity extends AppCompatActivity {
     Button bottoneRegistrazione;
@@ -48,7 +53,12 @@ public class RegistrazioneActivity extends AppCompatActivity {
         String email = emailET.getText().toString();
         String username = usernameET.getText().toString();
         String password = passwordET.getText().toString();
-        String[] roles = {"utente"};
+        List<String> list = new ArrayList<String>();
+        list.add("user");
+        JSONArray array = new JSONArray();
+        for(int i = 0; i < list.size(); i++) {
+            array.put(list.get(i));
+        }
         JSONObject json_signup = new JSONObject();
         try {
 
@@ -56,34 +66,31 @@ public class RegistrazioneActivity extends AppCompatActivity {
             json_signup.put("email", email);
             json_signup.put("username", username);
             json_signup.put("password", password);
-            json_signup.put("role", roles);
+            json_signup.put("role", array);
         } catch (JSONException ex) {
             System.out.println("Errore" + ex);
         }
+        System.out.println(json_signup);
 
-
-        String url = "http://192.168.1.3:8080/api/signup";
+        String url = "http://192.168.1.3:8080/api/auth/signup";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
-        JSONObject postData = new JSONObject();
-        try {
-            postData.put("email", email);
-            postData.put("password", password);
-            postData.put("username", username);
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, postData, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, json_signup, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                Toast.makeText(getApplicationContext(), "Response: "+response, Toast.LENGTH_LONG).show();
+
+                Toast.makeText(getApplicationContext(), "Utente registrato correttamente", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
+
+                Toast.makeText(getApplicationContext(), "Si è verificato un errore, riprova più tardi", Toast.LENGTH_LONG).show();
+                System.out.println(error.getMessage());
             }
         });
 

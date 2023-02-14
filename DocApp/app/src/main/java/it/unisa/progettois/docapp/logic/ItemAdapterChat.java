@@ -13,9 +13,6 @@ import android.widget.TextView;
 import java.util.List;
 
 import it.unisa.progettois.docapp.R;
-import it.unisa.progettois.docapp.data.Documento;
-import it.unisa.progettois.docapp.data.Messaggio;
-import it.unisa.progettois.docapp.data.Studente;
 import it.unisa.progettois.docapp.data.StudenteDAO;
 
 public class ItemAdapterChat extends ArrayAdapter<Messaggio> {

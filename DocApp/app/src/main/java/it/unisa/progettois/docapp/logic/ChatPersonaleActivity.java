@@ -2,7 +2,6 @@ package it.unisa.progettois.docapp.logic;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -16,9 +15,7 @@ import java.util.List;
 
 import it.unisa.progettois.docapp.R;
 import it.unisa.progettois.docapp.data.ConversazioneDAO;
-import it.unisa.progettois.docapp.data.Messaggio;
 import it.unisa.progettois.docapp.data.MessaggioDAO;
-import it.unisa.progettois.docapp.data.Studente;
 import it.unisa.progettois.docapp.data.StudenteDAO;
 
 public class ChatPersonaleActivity extends AppCompatActivity {

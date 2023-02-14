@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import it.unisa.progettois.docapp.R;
-import it.unisa.progettois.docapp.data.Studente;
 import it.unisa.progettois.docapp.data.StudenteDAO;
 
 public class ProfiloActivity extends AppCompatActivity {

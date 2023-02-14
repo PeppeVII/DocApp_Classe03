@@ -10,7 +10,6 @@ import android.widget.TextView;
 import java.util.List;
 
 import it.unisa.progettois.docapp.R;
-import it.unisa.progettois.docapp.data.Documento;
 
 public class ItemAdapaterDocumenti extends ArrayAdapter<Documento> {
     public ItemAdapaterDocumenti(Context context, List<Documento> documenti){

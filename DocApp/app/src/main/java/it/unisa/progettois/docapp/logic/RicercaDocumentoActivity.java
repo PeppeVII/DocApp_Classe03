@@ -15,7 +15,6 @@ import java.io.Serializable;
 import java.util.List;
 
 import it.unisa.progettois.docapp.R;
-import it.unisa.progettois.docapp.data.Documento;
 import it.unisa.progettois.docapp.data.DocumentoDAO;
 
 public class RicercaDocumentoActivity extends AppCompatActivity {

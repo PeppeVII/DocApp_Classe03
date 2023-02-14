@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,11 +22,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import it.unisa.progettois.docapp.R;
-import it.unisa.progettois.docapp.data.Caricamento;
 import it.unisa.progettois.docapp.data.CaricamentoDAO;
-import it.unisa.progettois.docapp.data.Documento;
 import it.unisa.progettois.docapp.data.DocumentoDAO;
-import it.unisa.progettois.docapp.data.Studente;
 import it.unisa.progettois.docapp.data.StudenteDAO;
 import it.unisa.progettois.docapp.facade.Facade;
 

@@ -10,7 +10,6 @@ import android.widget.TextView;
 import java.util.List;
 
 import it.unisa.progettois.docapp.R;
-import it.unisa.progettois.docapp.data.Studente;
 
 public class ItemAdapterListaChat extends ArrayAdapter<Studente> {
 

@@ -16,7 +16,7 @@
         android:theme="@style/Theme.DocApp"
         tools:targetApi="31">
         <activity
-            android:name=".AvvioApplicazione"
+            android:name=".logic.AvvioApplicazione"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,14 +28,55 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".RegistrazioneActivity"/>
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".CaricaDocumentoActivity"/>
-        <activity android:name=".HomepageActivity"/>
-        <activity android:name=".ProfiloActivity"/>
-        <activity android:name=".RicercaDocumentoActivity"/>
-        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity
+            android:name=".logic.RegistrazioneActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".logic.LoginActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".logic.CaricaDocumentoActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".logic.HomepageActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".logic.ProfiloActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".logic.RicercaDocumentoActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
 
+        <activity android:name=".logic.ErrorPage"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".logic.DocumentoActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".logic.Documenti_Filtrati_Activity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".logic.ChatActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".logic.PDFActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".logic.ChatPersonaleActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
     </application>
+
 
 </manifest>

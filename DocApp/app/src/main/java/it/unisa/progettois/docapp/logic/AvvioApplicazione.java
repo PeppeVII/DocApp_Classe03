@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import it.unisa.progettois.docapp.R;
+import it.unisa.progettois.docapp.logic.RegistrazioneActivity;
 
 
 public class AvvioApplicazione extends AppCompatActivity {

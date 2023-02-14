@@ -14,8 +14,6 @@ import java.util.List;
 
 import it.unisa.progettois.docapp.R;
 import it.unisa.progettois.docapp.data.Documenti_VisualizzatiDAO;
-import it.unisa.progettois.docapp.data.Documento;
-import it.unisa.progettois.docapp.data.Studente;
 
 public class HomepageActivity extends AppCompatActivity
 {

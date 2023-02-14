@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.ListAdapter;
 
+import com.docapp.shared_docapp.models.Studente;
+
 import java.util.ArrayList;
 import java.util.List;
 

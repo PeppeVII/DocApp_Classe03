@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
+import com.docapp.shared_docapp.models.Studente;
+
 public class StudenteDAO {
     private SQLiteDatabase db;
     private DatabasePopulator dp;

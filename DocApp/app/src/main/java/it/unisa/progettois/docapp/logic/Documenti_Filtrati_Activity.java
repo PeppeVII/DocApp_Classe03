@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.List;
 
 import it.unisa.progettois.docapp.R;
-import it.unisa.progettois.docapp.data.Documento;
 
 public class Documenti_Filtrati_Activity extends AppCompatActivity {
     ListView listView;

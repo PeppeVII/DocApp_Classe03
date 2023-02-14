@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.docapp.shared_docapp.models.Caricamento;
+
 import it.unisa.progettois.docapp.facade.Facade;
 
 public class CaricamentoDAO implements Facade {
