@@ -1,79 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:layout_marginTop="-100dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="-100dp"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".logic.AvvioApplicazione">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="90dp"
-        android:src="@mipmap/titolo_is"/>
+        android:src="@mipmap/titolo_is" />
 
     <TextView
-        android:textColor="#2271b3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Accedi"
+        android:textColor="#2271b3"
         android:textSize="@dimen/textSize_high" />
 
     <LinearLayout
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_marginStart="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:text="Email"
             android:textSize="@dimen/textSize_small" />
 
         <EditText
-            android:id="@+id/emailLogin"
-            android:singleLine="true"
+            android:id="@+id/username"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:singleLine="true" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_marginStart="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+
             android:text="Password"
             android:textSize="@dimen/textSize_small" />
 
         <EditText
             android:id="@+id/passwordLogin"
-            android:singleLine="true"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:password="true"
+            android:singleLine="true" />
     </LinearLayout>
 
-        <Button
-            android:layout_marginTop="30dp"
-            android:textSize="@dimen/textSize_medium"
-            android:id="@+id/buttonAccedi"
-            android:onClick="effettuaLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#2271B3"
-            android:text="Accedi">
-        </Button>
+    <Button
+        android:id="@+id/buttonAccedi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#2271B3"
+        android:onClick="effettuaLogin"
+        android:text="Accedi"
+        android:textSize="@dimen/textSize_medium"></Button>
 
 </LinearLayout>

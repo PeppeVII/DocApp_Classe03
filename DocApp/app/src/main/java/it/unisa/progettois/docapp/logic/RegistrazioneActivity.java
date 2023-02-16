@@ -33,6 +33,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import it.unisa.progettois.docapp.R;
+import it.unisa.progettois.docapp.utils.StaticUrls;
+
 
 public class RegistrazioneActivity extends AppCompatActivity {
     Button bottoneRegistrazione;
@@ -71,19 +73,17 @@ public class RegistrazioneActivity extends AppCompatActivity {
             System.out.println("Errore" + ex);
         }
         System.out.println(json_signup);
-
-        String url = "http://192.168.1.3:8080/api/auth/signup";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
+        System.out.println(StaticUrls.getUrl("url_register"));
 
-
-
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, json_signup, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, StaticUrls.getUrl("url_register"), json_signup, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
                 Toast.makeText(getApplicationContext(), "Utente registrato correttamente", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
+
             }
         }, new Response.ErrorListener() {
             @Override
