@@ -16,7 +16,7 @@ DocApp sarà un'app mobile che darà la possibilità di acquisire documenti atti
 Essa fornirà uno strumento di supporto per lo studio degli studenti lavoratore ma anche dare la possibilità agli studenti di condividere appunti personali e/o
 adeguamenti di slide rispetto a quelle fornite dai professori universitari.
 
-
+## <a href="https://github.com/boxxello/backend_docapp"> Reference al backend </a>
 
 
 # Partecipanti
