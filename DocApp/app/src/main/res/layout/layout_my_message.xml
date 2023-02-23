@@ -17,6 +17,6 @@
         android:elevation="2dp"
         android:textSize="@dimen/textSize_document"
         android:layout_alignParentEnd="true"
-        android:text="Porcodiddio"/>
+        android:text="Prova"/>
 
 </RelativeLayout>

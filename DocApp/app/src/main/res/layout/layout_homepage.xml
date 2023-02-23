@@ -45,18 +45,29 @@
             android:textColor="@android:color/black"
             android:textSize="@dimen/textSize_medium"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDocumentiPertinenti"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
-                <ListView
-                    android:id="@+id/documenti_pertinenti"
+        <!--
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-            </LinearLayout>
+                    <ListView
+                        android:paddingStart="140dp"
+                        android:id="@+id/documenti_pertinenti"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:rotation="270"
+                        tools:ignore="RtlSymmetry"/>
 
+                </LinearLayout>
+        -->
     </LinearLayout>
 
 
@@ -80,78 +91,11 @@
             android:layout_height="wrap_content"
             android:text="Qui troverai tutte le facoltà che sono disponibili"/>
 
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <!--
-            <LinearLayout
-                android:weightSum="15"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-                <FrameLayout
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="#2271b3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-                <LinearLayout
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="#2271b3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-                <LinearLayout
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="#2271b3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#2271b3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-            </LinearLayout>
-
-            -->
-
-            <ListView
-                android:rotation="90"
-                android:scrollbarStyle="insideInset"
-                android:id="@+id/listaDocumentiPertinenti"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </HorizontalScrollView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFacolta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"/>
 
     </LinearLayout>
 
@@ -176,69 +120,11 @@
             android:layout_height="wrap_content"
             android:text="Qui troverai tutte le facoltà che sono disponibili"/>
 
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:weightSum="15"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-                <FrameLayout
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="#2271b3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-                <LinearLayout
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="#2271b3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-                <LinearLayout
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="#2271b3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#2271b3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="180dp"
-                    android:src="@mipmap/logo_is_1"/>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvUniversita"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"/>
     </LinearLayout>
 
 

@@ -1,6 +1,8 @@
 package it.unisa.progettois.docapp.logic;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
@@ -17,15 +21,16 @@ import it.unisa.progettois.docapp.data.Documenti_VisualizzatiDAO;
 import it.unisa.progettois.docapp.data.Documento;
 import it.unisa.progettois.docapp.data.Studente;
 
-public class HomepageActivity extends AppCompatActivity
-{
+public class HomepageActivity extends AppCompatActivity{
     Button bottoneFiltro;
     ImageView carica, profilo, chat;
     Studente studente;
-    ListView listView;
+    ListView listView_documenti_pertinenti;
     Documenti_VisualizzatiDAO documenti_visualizzatiDAO;
     ItemAdapaterDocumenti item;
+    RecyclerView recyclerViewF, recyclerViewU, recyclerViewD;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedIstanceState) {
         super.onCreate(savedIstanceState);
@@ -36,15 +41,48 @@ public class HomepageActivity extends AppCompatActivity
         carica = findViewById(R.id.iconaCarica);
         profilo = findViewById(R.id.iconaProfilo);
         chat = findViewById(R.id.iconaChat);
-        listView = findViewById(R.id.documenti_pertinenti);
+        //listView_documenti_pertinenti = findViewById(R.id.documenti_pertinenti);
+        recyclerViewF = findViewById(R.id.rvFacolta);
+        recyclerViewU = findViewById(R.id.rvUniversita);
 
+
+
+        //Implementazione lista facoltà
+        Resources resFacolta = getResources();
+        String[] itemsFacolta = resFacolta.getStringArray(R.array.spinner_facolta);
+        HorizontalAdapterF horizontalAdapterF = new HorizontalAdapterF(itemsFacolta);
+        LinearLayoutManager linearLayoutManagerF = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewF.setLayoutManager(linearLayoutManagerF);
+        recyclerViewF.addItemDecoration(new HorizontalSpaceItemDecoration(20));
+        recyclerViewF.setAdapter(horizontalAdapterF);
+
+
+        //Implementazione lista università
+        Resources resUniversita = getResources();
+        String[] itemsUniversita = resUniversita.getStringArray(R.array.spinner_universita);
+        HorizontalAdapterU horizontalAdapterU = new HorizontalAdapterU(itemsUniversita);
+        LinearLayoutManager linearLayoutManagerU = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewU.setLayoutManager(linearLayoutManagerU);
+        recyclerViewU.addItemDecoration(new HorizontalSpaceItemDecoration(20));
+        recyclerViewU.setAdapter(horizontalAdapterU);
+
+
+        //Listaview documenti pertinenti homepage
         documenti_visualizzatiDAO = new Documenti_VisualizzatiDAO(getApplicationContext());
         List<Documento> documenti_pertinenti = documenti_visualizzatiDAO.getDocumentiPertinenti();
 
-        item = new ItemAdapaterDocumenti(getApplicationContext(), documenti_pertinenti);
-        listView.setAdapter(item);
+        recyclerViewD = findViewById(R.id.rvDocumentiPertinenti);
+        recyclerViewD.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+        recyclerViewD.addItemDecoration(new HorizontalSpaceItemDecoration(20));
+        HorizontalAdapterD horizontalAdapterD = new HorizontalAdapterD(this, documenti_pertinenti);
+        recyclerViewD.setAdapter(horizontalAdapterD);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
+        /*item = new ItemAdapaterDocumenti(getApplicationContext(), documenti_pertinenti);
+        listView_documenti_pertinenti.setAdapter(item);
+
+        listView_documenti_pertinenti.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getApplicationContext(), DocumentoActivity.class);
@@ -52,7 +90,7 @@ public class HomepageActivity extends AppCompatActivity
                 intent.putExtra("documento", documento);
                 startActivity(intent);
             }
-        });
+        });*/
 
         profilo.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), ProfiloActivity.class);

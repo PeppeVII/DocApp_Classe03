@@ -5,10 +5,14 @@
     android:orientation="vertical">
 
     <TextView
-        android:text="Gesucrist e a maronn"
+        android:text="prova"
         android:textSize="@dimen/textSize_medium"
         android:id="@+id/nome_chat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <FrameLayout
+        android:background="#a9a9a9"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
 </LinearLayout>
